@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+..//util/log.h
+string
+-
+stdio.h
+-
+stdarg.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+unistd.h
+-
+util/tools.h
+../util/util/tools.h
+
+..//util/tools.h
+string
+-
+fstream
+-
+sys/types.h
+-
+sys/stat.h
+-
+dirent.h
+-
+
+/home/cyz/CLionProjects/clog/daemon/main.cpp
+iostream
+-
+util/log.h
+/home/cyz/CLionProjects/clog/daemon/util/log.h
+

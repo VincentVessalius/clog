@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/clog.dir/daemon/main.cpp.o CMakeFiles/clog.dir/daemon/main_test.cpp.o  -o clog 
