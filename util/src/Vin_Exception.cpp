@@ -6,7 +6,7 @@
 #include <execinfo.h>
 
 namespace vince {
-    bool Vin_Exception::_rcdBacktrace= false;
+    bool Vin_Exception::rcd_backtrace= false;
 
     void Vin_Exception::getBacktrace() {
         void *array[64];

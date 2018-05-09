@@ -44,7 +44,7 @@ namespace vince {
 
         //void cancelWithTime(const long&));
     private:
-        std::shared_ptr<std::thread> _ptrThread;
+        std::shared_ptr<std::thread> _ptr_thread;
     };
 
 /////////////////////////////////////TODO
@@ -71,12 +71,12 @@ namespace vince {
         virtual void run()=0;
 
     protected:
-        bool _isrunning = false;
-        std::shared_ptr<std::thread> _ptrThread;
-        Vin_ThreadControl _thdControl;
-        Vin_ThreadLock _lock;
-        std::mutex _thdLock;
-        std::condition_variable _thdCond;
+        bool _is_running = false;
+        std::shared_ptr<std::thread> _ptr_thread;
+        Vin_ThreadControl _thd_control;
+        //Vin_ThreadLock _lock;
+        std::mutex _thd_lock;
+        std::condition_variable _thd_cond;
     };
 
 }

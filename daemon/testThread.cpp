@@ -11,6 +11,7 @@ testThread::testThread() {}
 void testThread::run() {
     while(true){
         sleep(2);
-        std::cout<<2<<std::endl;
+
+        std::cout<<pthread_self()<<std::endl;
     }
 }

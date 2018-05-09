@@ -113,6 +113,9 @@
 		<Unit filename="/home/cyz/CLionProjects/clog/util/include/Vin_Thread.h">
 			<Option target="clog_test"/>
 		</Unit>
+		<Unit filename="/home/cyz/CLionProjects/clog/util/include/Vin_ThreadPool.h">
+			<Option target="clog_test"/>
+		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/include/log.h">
 			<Option target="clog_test"/>
 		</Unit>
@@ -123,6 +126,9 @@
 			<Option target="clog_test"/>
 		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp">
+			<Option target="clog_test"/>
+		</Unit>
+		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_ThreadPool.cpp">
 			<Option target="clog_test"/>
 		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/log.cpp">

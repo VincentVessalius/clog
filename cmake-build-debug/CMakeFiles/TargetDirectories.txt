@@ -1,3 +1,10 @@
 /home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/clog_test.dir
+/home/cyz/CLionProjects/clog/cmake-build-debug/util/include/CMakeFiles/rebuild_cache.dir
+/home/cyz/CLionProjects/clog/cmake-build-debug/util/include/CMakeFiles/edit_cache.dir
+/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/rebuild_cache.dir
+/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/edit_cache.dir
+/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir
+/home/cyz/CLionProjects/clog/cmake-build-debug/daemon/CMakeFiles/rebuild_cache.dir
+/home/cyz/CLionProjects/clog/cmake-build-debug/daemon/CMakeFiles/edit_cache.dir
+/home/cyz/CLionProjects/clog/cmake-build-debug/daemon/CMakeFiles/clog_test.dir
