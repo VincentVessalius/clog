@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named vinceutil
+
+# Build rule for target.
+vinceutil: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vinceutil
+.PHONY : vinceutil
+
+# fast build rule for target.
+vinceutil/fast:
+	$(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/build
+.PHONY : vinceutil/fast
+
+#=============================================================================
 # Target rules for targets named clog_test
 
 # Build rule for target.
@@ -120,224 +133,8 @@ clog_test: cmake_check_build_system
 
 # fast build rule for target.
 clog_test/fast:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/build
+	$(MAKE) -f daemon/CMakeFiles/clog_test.dir/build.make daemon/CMakeFiles/clog_test.dir/build
 .PHONY : clog_test/fast
-
-daemon/Servant.o: daemon/Servant.cpp.o
-
-.PHONY : daemon/Servant.o
-
-# target to build an object file
-daemon/Servant.cpp.o:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/Servant.cpp.o
-.PHONY : daemon/Servant.cpp.o
-
-daemon/Servant.i: daemon/Servant.cpp.i
-
-.PHONY : daemon/Servant.i
-
-# target to preprocess a source file
-daemon/Servant.cpp.i:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/Servant.cpp.i
-.PHONY : daemon/Servant.cpp.i
-
-daemon/Servant.s: daemon/Servant.cpp.s
-
-.PHONY : daemon/Servant.s
-
-# target to generate assembly for a file
-daemon/Servant.cpp.s:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/Servant.cpp.s
-.PHONY : daemon/Servant.cpp.s
-
-daemon/Server.o: daemon/Server.cpp.o
-
-.PHONY : daemon/Server.o
-
-# target to build an object file
-daemon/Server.cpp.o:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/Server.cpp.o
-.PHONY : daemon/Server.cpp.o
-
-daemon/Server.i: daemon/Server.cpp.i
-
-.PHONY : daemon/Server.i
-
-# target to preprocess a source file
-daemon/Server.cpp.i:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/Server.cpp.i
-.PHONY : daemon/Server.cpp.i
-
-daemon/Server.s: daemon/Server.cpp.s
-
-.PHONY : daemon/Server.s
-
-# target to generate assembly for a file
-daemon/Server.cpp.s:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/Server.cpp.s
-.PHONY : daemon/Server.cpp.s
-
-daemon/main_test.o: daemon/main_test.cpp.o
-
-.PHONY : daemon/main_test.o
-
-# target to build an object file
-daemon/main_test.cpp.o:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/main_test.cpp.o
-.PHONY : daemon/main_test.cpp.o
-
-daemon/main_test.i: daemon/main_test.cpp.i
-
-.PHONY : daemon/main_test.i
-
-# target to preprocess a source file
-daemon/main_test.cpp.i:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/main_test.cpp.i
-.PHONY : daemon/main_test.cpp.i
-
-daemon/main_test.s: daemon/main_test.cpp.s
-
-.PHONY : daemon/main_test.s
-
-# target to generate assembly for a file
-daemon/main_test.cpp.s:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/main_test.cpp.s
-.PHONY : daemon/main_test.cpp.s
-
-daemon/testThread.o: daemon/testThread.cpp.o
-
-.PHONY : daemon/testThread.o
-
-# target to build an object file
-daemon/testThread.cpp.o:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/testThread.cpp.o
-.PHONY : daemon/testThread.cpp.o
-
-daemon/testThread.i: daemon/testThread.cpp.i
-
-.PHONY : daemon/testThread.i
-
-# target to preprocess a source file
-daemon/testThread.cpp.i:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/testThread.cpp.i
-.PHONY : daemon/testThread.cpp.i
-
-daemon/testThread.s: daemon/testThread.cpp.s
-
-.PHONY : daemon/testThread.s
-
-# target to generate assembly for a file
-daemon/testThread.cpp.s:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/daemon/testThread.cpp.s
-.PHONY : daemon/testThread.cpp.s
-
-util/src/Vin_Exception.o: util/src/Vin_Exception.cpp.o
-
-.PHONY : util/src/Vin_Exception.o
-
-# target to build an object file
-util/src/Vin_Exception.cpp.o:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o
-.PHONY : util/src/Vin_Exception.cpp.o
-
-util/src/Vin_Exception.i: util/src/Vin_Exception.cpp.i
-
-.PHONY : util/src/Vin_Exception.i
-
-# target to preprocess a source file
-util/src/Vin_Exception.cpp.i:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.i
-.PHONY : util/src/Vin_Exception.cpp.i
-
-util/src/Vin_Exception.s: util/src/Vin_Exception.cpp.s
-
-.PHONY : util/src/Vin_Exception.s
-
-# target to generate assembly for a file
-util/src/Vin_Exception.cpp.s:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.s
-.PHONY : util/src/Vin_Exception.cpp.s
-
-util/src/Vin_Thread.o: util/src/Vin_Thread.cpp.o
-
-.PHONY : util/src/Vin_Thread.o
-
-# target to build an object file
-util/src/Vin_Thread.cpp.o:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o
-.PHONY : util/src/Vin_Thread.cpp.o
-
-util/src/Vin_Thread.i: util/src/Vin_Thread.cpp.i
-
-.PHONY : util/src/Vin_Thread.i
-
-# target to preprocess a source file
-util/src/Vin_Thread.cpp.i:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.i
-.PHONY : util/src/Vin_Thread.cpp.i
-
-util/src/Vin_Thread.s: util/src/Vin_Thread.cpp.s
-
-.PHONY : util/src/Vin_Thread.s
-
-# target to generate assembly for a file
-util/src/Vin_Thread.cpp.s:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.s
-.PHONY : util/src/Vin_Thread.cpp.s
-
-util/src/log.o: util/src/log.cpp.o
-
-.PHONY : util/src/log.o
-
-# target to build an object file
-util/src/log.cpp.o:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/log.cpp.o
-.PHONY : util/src/log.cpp.o
-
-util/src/log.i: util/src/log.cpp.i
-
-.PHONY : util/src/log.i
-
-# target to preprocess a source file
-util/src/log.cpp.i:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/log.cpp.i
-.PHONY : util/src/log.cpp.i
-
-util/src/log.s: util/src/log.cpp.s
-
-.PHONY : util/src/log.s
-
-# target to generate assembly for a file
-util/src/log.cpp.s:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/log.cpp.s
-.PHONY : util/src/log.cpp.s
-
-util/src/tools.o: util/src/tools.cpp.o
-
-.PHONY : util/src/tools.o
-
-# target to build an object file
-util/src/tools.cpp.o:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/tools.cpp.o
-.PHONY : util/src/tools.cpp.o
-
-util/src/tools.i: util/src/tools.cpp.i
-
-.PHONY : util/src/tools.i
-
-# target to preprocess a source file
-util/src/tools.cpp.i:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/tools.cpp.i
-.PHONY : util/src/tools.cpp.i
-
-util/src/tools.s: util/src/tools.cpp.s
-
-.PHONY : util/src/tools.s
-
-# target to generate assembly for a file
-util/src/tools.cpp.s:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/tools.cpp.s
-.PHONY : util/src/tools.cpp.s
 
 # Help Target
 help:
@@ -347,31 +144,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... vinceutil"
 	@echo "... clog_test"
-	@echo "... daemon/Servant.o"
-	@echo "... daemon/Servant.i"
-	@echo "... daemon/Servant.s"
-	@echo "... daemon/Server.o"
-	@echo "... daemon/Server.i"
-	@echo "... daemon/Server.s"
-	@echo "... daemon/main_test.o"
-	@echo "... daemon/main_test.i"
-	@echo "... daemon/main_test.s"
-	@echo "... daemon/testThread.o"
-	@echo "... daemon/testThread.i"
-	@echo "... daemon/testThread.s"
-	@echo "... util/src/Vin_Exception.o"
-	@echo "... util/src/Vin_Exception.i"
-	@echo "... util/src/Vin_Exception.s"
-	@echo "... util/src/Vin_Thread.o"
-	@echo "... util/src/Vin_Thread.i"
-	@echo "... util/src/Vin_Thread.s"
-	@echo "... util/src/log.o"
-	@echo "... util/src/log.i"
-	@echo "... util/src/log.s"
-	@echo "... util/src/tools.o"
-	@echo "... util/src/tools.i"
-	@echo "... util/src/tools.s"
 .PHONY : help
 
 

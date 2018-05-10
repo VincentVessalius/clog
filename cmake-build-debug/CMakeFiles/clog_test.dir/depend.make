@@ -26,17 +26,3 @@ CMakeFiles/clog_test.dir/daemon/testThread.cpp.o: ../util/include/Vin_Exception.
 CMakeFiles/clog_test.dir/daemon/testThread.cpp.o: ../daemon/testThread.cpp
 CMakeFiles/clog_test.dir/daemon/testThread.cpp.o: ../daemon/testThread.h
 
-CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o: ../util/include/Vin_Exception.h
-CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o: ../util/src/Vin_Exception.cpp
-
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o: ../util/include/Vin_Thread.h
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o: ../util/include/Vin_Exception.h
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o: ../util/src/Vin_Thread.cpp
-
-CMakeFiles/clog_test.dir/util/src/log.cpp.o: ../util/include/log.h
-CMakeFiles/clog_test.dir/util/src/log.cpp.o: ../util/include/tools.h
-CMakeFiles/clog_test.dir/util/src/log.cpp.o: ../util/src/log.cpp
-
-CMakeFiles/clog_test.dir/util/src/tools.cpp.o: ../util/include/tools.h
-CMakeFiles/clog_test.dir/util/src/tools.cpp.o: ../util/src/tools.cpp
-

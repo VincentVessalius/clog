@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/clog_test.dir/Servant.cpp.o CMakeFiles/clog_test.dir/Server.cpp.o CMakeFiles/clog_test.dir/testThread.cpp.o CMakeFiles/clog_test.dir/main_test/main_test.cpp.o  -o ../../bin/clog_test -lpthread ../../lib/libvinceutil.a 

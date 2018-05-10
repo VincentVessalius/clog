@@ -11,6 +11,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.3/CMakeSystem.cmake"
+  "../daemon/CMakeLists.txt"
+  "../util/include/CMakeLists.txt"
+  "../util/src/CMakeLists.txt"
   "/opt/clion-2018.1.2/bin/cmake/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/opt/clion-2018.1.2/bin/cmake/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/opt/clion-2018.1.2/bin/cmake/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
@@ -41,9 +44,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "util/include/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "util/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "daemon/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/clog_test.dir/DependInfo.cmake"
+  "util/src/CMakeFiles/vinceutil.dir/DependInfo.cmake"
+  "daemon/CMakeFiles/clog_test.dir/DependInfo.cmake"
   )

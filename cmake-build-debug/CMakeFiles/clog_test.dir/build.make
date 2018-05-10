@@ -105,57 +105,9 @@ CMakeFiles/clog_test.dir/daemon/Server.cpp.o.provides: CMakeFiles/clog_test.dir/
 CMakeFiles/clog_test.dir/daemon/Server.cpp.o.provides.build: CMakeFiles/clog_test.dir/daemon/Server.cpp.o
 
 
-CMakeFiles/clog_test.dir/util/src/tools.cpp.o: CMakeFiles/clog_test.dir/flags.make
-CMakeFiles/clog_test.dir/util/src/tools.cpp.o: ../util/src/tools.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/clog_test.dir/util/src/tools.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clog_test.dir/util/src/tools.cpp.o -c /home/cyz/CLionProjects/clog/util/src/tools.cpp
-
-CMakeFiles/clog_test.dir/util/src/tools.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clog_test.dir/util/src/tools.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyz/CLionProjects/clog/util/src/tools.cpp > CMakeFiles/clog_test.dir/util/src/tools.cpp.i
-
-CMakeFiles/clog_test.dir/util/src/tools.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clog_test.dir/util/src/tools.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyz/CLionProjects/clog/util/src/tools.cpp -o CMakeFiles/clog_test.dir/util/src/tools.cpp.s
-
-CMakeFiles/clog_test.dir/util/src/tools.cpp.o.requires:
-
-.PHONY : CMakeFiles/clog_test.dir/util/src/tools.cpp.o.requires
-
-CMakeFiles/clog_test.dir/util/src/tools.cpp.o.provides: CMakeFiles/clog_test.dir/util/src/tools.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/tools.cpp.o.provides.build
-.PHONY : CMakeFiles/clog_test.dir/util/src/tools.cpp.o.provides
-
-CMakeFiles/clog_test.dir/util/src/tools.cpp.o.provides.build: CMakeFiles/clog_test.dir/util/src/tools.cpp.o
-
-
-CMakeFiles/clog_test.dir/util/src/log.cpp.o: CMakeFiles/clog_test.dir/flags.make
-CMakeFiles/clog_test.dir/util/src/log.cpp.o: ../util/src/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/clog_test.dir/util/src/log.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clog_test.dir/util/src/log.cpp.o -c /home/cyz/CLionProjects/clog/util/src/log.cpp
-
-CMakeFiles/clog_test.dir/util/src/log.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clog_test.dir/util/src/log.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyz/CLionProjects/clog/util/src/log.cpp > CMakeFiles/clog_test.dir/util/src/log.cpp.i
-
-CMakeFiles/clog_test.dir/util/src/log.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clog_test.dir/util/src/log.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyz/CLionProjects/clog/util/src/log.cpp -o CMakeFiles/clog_test.dir/util/src/log.cpp.s
-
-CMakeFiles/clog_test.dir/util/src/log.cpp.o.requires:
-
-.PHONY : CMakeFiles/clog_test.dir/util/src/log.cpp.o.requires
-
-CMakeFiles/clog_test.dir/util/src/log.cpp.o.provides: CMakeFiles/clog_test.dir/util/src/log.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/log.cpp.o.provides.build
-.PHONY : CMakeFiles/clog_test.dir/util/src/log.cpp.o.provides
-
-CMakeFiles/clog_test.dir/util/src/log.cpp.o.provides.build: CMakeFiles/clog_test.dir/util/src/log.cpp.o
-
-
 CMakeFiles/clog_test.dir/daemon/Servant.cpp.o: CMakeFiles/clog_test.dir/flags.make
 CMakeFiles/clog_test.dir/daemon/Servant.cpp.o: ../daemon/Servant.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/clog_test.dir/daemon/Servant.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/clog_test.dir/daemon/Servant.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clog_test.dir/daemon/Servant.cpp.o -c /home/cyz/CLionProjects/clog/daemon/Servant.cpp
 
 CMakeFiles/clog_test.dir/daemon/Servant.cpp.i: cmake_force
@@ -177,33 +129,9 @@ CMakeFiles/clog_test.dir/daemon/Servant.cpp.o.provides: CMakeFiles/clog_test.dir
 CMakeFiles/clog_test.dir/daemon/Servant.cpp.o.provides.build: CMakeFiles/clog_test.dir/daemon/Servant.cpp.o
 
 
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o: CMakeFiles/clog_test.dir/flags.make
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o: ../util/src/Vin_Thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o -c /home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp
-
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp > CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.i
-
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp -o CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.s
-
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o.requires:
-
-.PHONY : CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o.requires
-
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o.provides: CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o.provides.build
-.PHONY : CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o.provides
-
-CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o.provides.build: CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o
-
-
 CMakeFiles/clog_test.dir/daemon/testThread.cpp.o: CMakeFiles/clog_test.dir/flags.make
 CMakeFiles/clog_test.dir/daemon/testThread.cpp.o: ../daemon/testThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/clog_test.dir/daemon/testThread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/clog_test.dir/daemon/testThread.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clog_test.dir/daemon/testThread.cpp.o -c /home/cyz/CLionProjects/clog/daemon/testThread.cpp
 
 CMakeFiles/clog_test.dir/daemon/testThread.cpp.i: cmake_force
@@ -225,70 +153,34 @@ CMakeFiles/clog_test.dir/daemon/testThread.cpp.o.provides: CMakeFiles/clog_test.
 CMakeFiles/clog_test.dir/daemon/testThread.cpp.o.provides.build: CMakeFiles/clog_test.dir/daemon/testThread.cpp.o
 
 
-CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o: CMakeFiles/clog_test.dir/flags.make
-CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o: ../util/src/Vin_Exception.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o -c /home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp
-
-CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp > CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.i
-
-CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp -o CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.s
-
-CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o.requires:
-
-.PHONY : CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o.requires
-
-CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o.provides: CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o.provides.build
-.PHONY : CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o.provides
-
-CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o.provides.build: CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o
-
-
 # Object files for target clog_test
 clog_test_OBJECTS = \
 "CMakeFiles/clog_test.dir/daemon/main_test.cpp.o" \
 "CMakeFiles/clog_test.dir/daemon/Server.cpp.o" \
-"CMakeFiles/clog_test.dir/util/src/tools.cpp.o" \
-"CMakeFiles/clog_test.dir/util/src/log.cpp.o" \
 "CMakeFiles/clog_test.dir/daemon/Servant.cpp.o" \
-"CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o" \
-"CMakeFiles/clog_test.dir/daemon/testThread.cpp.o" \
-"CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o"
+"CMakeFiles/clog_test.dir/daemon/testThread.cpp.o"
 
 # External object files for target clog_test
 clog_test_EXTERNAL_OBJECTS =
 
-clog_test: CMakeFiles/clog_test.dir/daemon/main_test.cpp.o
-clog_test: CMakeFiles/clog_test.dir/daemon/Server.cpp.o
-clog_test: CMakeFiles/clog_test.dir/util/src/tools.cpp.o
-clog_test: CMakeFiles/clog_test.dir/util/src/log.cpp.o
-clog_test: CMakeFiles/clog_test.dir/daemon/Servant.cpp.o
-clog_test: CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o
-clog_test: CMakeFiles/clog_test.dir/daemon/testThread.cpp.o
-clog_test: CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o
-clog_test: CMakeFiles/clog_test.dir/build.make
-clog_test: CMakeFiles/clog_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable clog_test"
+../bin/clog_test: CMakeFiles/clog_test.dir/daemon/main_test.cpp.o
+../bin/clog_test: CMakeFiles/clog_test.dir/daemon/Server.cpp.o
+../bin/clog_test: CMakeFiles/clog_test.dir/daemon/Servant.cpp.o
+../bin/clog_test: CMakeFiles/clog_test.dir/daemon/testThread.cpp.o
+../bin/clog_test: CMakeFiles/clog_test.dir/build.make
+../bin/clog_test: CMakeFiles/clog_test.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../bin/clog_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/clog_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/clog_test.dir/build: clog_test
+CMakeFiles/clog_test.dir/build: ../bin/clog_test
 
 .PHONY : CMakeFiles/clog_test.dir/build
 
 CMakeFiles/clog_test.dir/requires: CMakeFiles/clog_test.dir/daemon/main_test.cpp.o.requires
 CMakeFiles/clog_test.dir/requires: CMakeFiles/clog_test.dir/daemon/Server.cpp.o.requires
-CMakeFiles/clog_test.dir/requires: CMakeFiles/clog_test.dir/util/src/tools.cpp.o.requires
-CMakeFiles/clog_test.dir/requires: CMakeFiles/clog_test.dir/util/src/log.cpp.o.requires
 CMakeFiles/clog_test.dir/requires: CMakeFiles/clog_test.dir/daemon/Servant.cpp.o.requires
-CMakeFiles/clog_test.dir/requires: CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o.requires
 CMakeFiles/clog_test.dir/requires: CMakeFiles/clog_test.dir/daemon/testThread.cpp.o.requires
-CMakeFiles/clog_test.dir/requires: CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o.requires
 
 .PHONY : CMakeFiles/clog_test.dir/requires
 

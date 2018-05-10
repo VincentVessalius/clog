@@ -60,39 +60,130 @@ CMAKE_SOURCE_DIR = /home/cyz/CLionProjects/clog
 CMAKE_BINARY_DIR = /home/cyz/CLionProjects/clog/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/clog_test.dir
+# Directory level rules for directory util/include
+
+# Convenience name for "all" pass in the directory.
+util/include/all:
+
+.PHONY : util/include/all
+
+# Convenience name for "clean" pass in the directory.
+util/include/clean:
+
+.PHONY : util/include/clean
+
+# Convenience name for "preinstall" pass in the directory.
+util/include/preinstall:
+
+.PHONY : util/include/preinstall
+
+#=============================================================================
+# Directory level rules for directory util/src
+
+# Convenience name for "all" pass in the directory.
+util/src/all: util/src/CMakeFiles/vinceutil.dir/all
+
+.PHONY : util/src/all
+
+# Convenience name for "clean" pass in the directory.
+util/src/clean: util/src/CMakeFiles/vinceutil.dir/clean
+
+.PHONY : util/src/clean
+
+# Convenience name for "preinstall" pass in the directory.
+util/src/preinstall:
+
+.PHONY : util/src/preinstall
+
+#=============================================================================
+# Target rules for target util/src/CMakeFiles/vinceutil.dir
 
 # All Build rule for target.
-CMakeFiles/clog_test.dir/all:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/depend
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target clog_test"
-.PHONY : CMakeFiles/clog_test.dir/all
+util/src/CMakeFiles/vinceutil.dir/all:
+	$(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/depend
+	$(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=6,7,8,9,10,11 "Built target vinceutil"
+.PHONY : util/src/CMakeFiles/vinceutil.dir/all
 
 # Include target in all.
-all: CMakeFiles/clog_test.dir/all
+all: util/src/CMakeFiles/vinceutil.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/clog_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clog_test.dir/all
+util/src/CMakeFiles/vinceutil.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 util/src/CMakeFiles/vinceutil.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/clog_test.dir/rule
+.PHONY : util/src/CMakeFiles/vinceutil.dir/rule
 
 # Convenience name for target.
-clog_test: CMakeFiles/clog_test.dir/rule
+vinceutil: util/src/CMakeFiles/vinceutil.dir/rule
+
+.PHONY : vinceutil
+
+# clean rule for target.
+util/src/CMakeFiles/vinceutil.dir/clean:
+	$(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/clean
+.PHONY : util/src/CMakeFiles/vinceutil.dir/clean
+
+# clean rule for target.
+clean: util/src/CMakeFiles/vinceutil.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory daemon
+
+# Convenience name for "all" pass in the directory.
+daemon/all: daemon/CMakeFiles/clog_test.dir/all
+
+.PHONY : daemon/all
+
+# Convenience name for "clean" pass in the directory.
+daemon/clean: daemon/CMakeFiles/clog_test.dir/clean
+
+.PHONY : daemon/clean
+
+# Convenience name for "preinstall" pass in the directory.
+daemon/preinstall:
+
+.PHONY : daemon/preinstall
+
+#=============================================================================
+# Target rules for target daemon/CMakeFiles/clog_test.dir
+
+# All Build rule for target.
+daemon/CMakeFiles/clog_test.dir/all: util/src/CMakeFiles/vinceutil.dir/all
+	$(MAKE) -f daemon/CMakeFiles/clog_test.dir/build.make daemon/CMakeFiles/clog_test.dir/depend
+	$(MAKE) -f daemon/CMakeFiles/clog_test.dir/build.make daemon/CMakeFiles/clog_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target clog_test"
+.PHONY : daemon/CMakeFiles/clog_test.dir/all
+
+# Include target in all.
+all: daemon/CMakeFiles/clog_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+daemon/CMakeFiles/clog_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 daemon/CMakeFiles/clog_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles 0
+.PHONY : daemon/CMakeFiles/clog_test.dir/rule
+
+# Convenience name for target.
+clog_test: daemon/CMakeFiles/clog_test.dir/rule
 
 .PHONY : clog_test
 
 # clean rule for target.
-CMakeFiles/clog_test.dir/clean:
-	$(MAKE) -f CMakeFiles/clog_test.dir/build.make CMakeFiles/clog_test.dir/clean
-.PHONY : CMakeFiles/clog_test.dir/clean
+daemon/CMakeFiles/clog_test.dir/clean:
+	$(MAKE) -f daemon/CMakeFiles/clog_test.dir/build.make daemon/CMakeFiles/clog_test.dir/clean
+.PHONY : daemon/CMakeFiles/clog_test.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/clog_test.dir/clean
+clean: daemon/CMakeFiles/clog_test.dir/clean
 
 .PHONY : clean
 

@@ -8,10 +8,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/cyz/CLionProjects/clog/daemon/Server.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/clog_test.dir/daemon/Server.cpp.o"
   "/home/cyz/CLionProjects/clog/daemon/main_test.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/clog_test.dir/daemon/main_test.cpp.o"
   "/home/cyz/CLionProjects/clog/daemon/testThread.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/clog_test.dir/daemon/testThread.cpp.o"
-  "/home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/clog_test.dir/util/src/Vin_Exception.cpp.o"
-  "/home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/clog_test.dir/util/src/Vin_Thread.cpp.o"
-  "/home/cyz/CLionProjects/clog/util/src/log.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/clog_test.dir/util/src/log.cpp.o"
-  "/home/cyz/CLionProjects/clog/util/src/tools.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles/clog_test.dir/util/src/tools.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
