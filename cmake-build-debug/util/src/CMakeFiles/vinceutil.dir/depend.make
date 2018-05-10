@@ -4,12 +4,16 @@
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/src/Vin_Exception.cpp
 
+util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o: ../util/include/Vin_Task.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o: ../util/src/Vin_Task.cpp
+
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/include/Vin_Thread.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/src/Vin_Thread.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_ThreadPool.h
 util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_Exception.h
+util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_Task.h
 util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_TaskQueue.h
 util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_Thread.h
 util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/src/Vin_ThreadPool.cpp

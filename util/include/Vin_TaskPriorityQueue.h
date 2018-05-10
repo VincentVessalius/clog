@@ -11,15 +11,18 @@
 #include <condition_variable>
 #include <assert.h>
 #include "Vin_TaskQueue.h"
+#include "Vin_Task.h"
+#include "Vin_Comparers.h"
 
 namespace vince {
 
-    template<typename T, typename D = std::priority_queue<T> >
-    class Vin_TaskPriorityQueue :public Vin_TaskQueue<T, D> {
+    template<typename T, typename D = std::deque<T>, typename C=vince::GreaterForPtr<T> >
+    class Vin_TaskPriorityQueue : public Vin_TaskQueue<T, D> {
     public:
         Vin_TaskPriorityQueue() = default;
     public:
-        typedef D queueType;
+
+        typedef std::priority_queue<T,D,C> pqueueType;
 
         /**
          * @brief 从头部获取数据, 没有数据则等待.
@@ -31,6 +34,8 @@ namespace vince {
          * @return bool: true, 获取了数据, false, 无数据
          */
         virtual bool pop_front(T &t, size_t millsecond) override ;
+
+        virtual bool pop_front(T &t) override ;
 
         /**
          * @brief 放数据到队列后端.
@@ -44,77 +49,77 @@ namespace vince {
          *
          * @param vt
          */
-        virtual void push_back(const queueType &qt)override;
+        virtual void push_back(D &qt);
 
+    protected:
+        void push_front(const T &t) final{
+            return;
+        }
 
+        void push_front(const D &qt) final{
+            return;
+        };
 
-    private:
-        /**
-         * @brief  放数据到队列前端.
-         *
-         * @param t
-         */
-        void push_front(const T &t) final = default;
-
-        /**
-         * @brief  放数据到队列前端.
-         *
-         * @param vt
-         */
-        void push_front(const queueType &qt) final= default;
+    protected:
+        pqueueType _pqueue;
 
     };
 
-    template<typename T, typename D>
-    bool Vin_TaskPriorityQueue<T, D>::pop_front(T &t, size_t millsecond) {
-        std::unique_lock<std::mutex> lck(_lock);
+    template<typename T, typename D,typename C>
+    bool Vin_TaskPriorityQueue<T, D, C>::pop_front(T &t, size_t millsecond) {
+        std::unique_lock<std::mutex> lck(this->_lock);
 
-        if (_queue.empty()) {
+        if (this->_pqueue.empty()) {
             if (millsecond == 0) {
                 return false;
             }
             if (millsecond == (size_t) -1) {
-                _cond.wait(lck);
+                this->_cond.wait(lck);
             } else {
                 //超时了
-                if (!_cond.wait_for(lck, millsecond * 1ms)) {
+                if (this->_cond.wait_for(lck, std::chrono::milliseconds(millsecond)) == std::cv_status::timeout) {
                     return false;
                 }
             }
         }
 
-        if (_queue.empty()) {
+        if (this->_pqueue.empty()) {
             return false;
         }
 
-        t = _queue.top();
-        _queue.pop();
-        assert(_size > 0);
-        --_size;
+        t = this->_pqueue.top();
+        this->_pqueue.pop();
+        assert(this->_size > 0);
+        --this->_size;
 
         return true;
     }
 
-    template<typename T, typename D>
-    void Vin_TaskPriorityQueue<T, D>::push_back(const T &t) {
-        std::unique_lock<std::mutex> lck(_lock);
+    template<typename T, typename D,typename C>
+    bool Vin_TaskPriorityQueue<T,D,C>::pop_front(T &t) {
+        pop_front(t,0);
+    }
 
-        _cond.notify_one();
+    template<typename T, typename D,typename C>
+    void Vin_TaskPriorityQueue<T,D,C>::push_back(const T &t) {
+        std::unique_lock<std::mutex> lck(this->_lock);
 
-        _queue.push(t);
-        ++_size;
+        this->_cond.notify_one();
+
+        this->_pqueue.push(t);
+        ++this->_size;
     }
 
     //TODO
-    template<typename T, typename D>
-    void Vin_TaskQueue<T, D>::push_back(const queueType &qt) {
-        std::unique_lock<std::mutex> lck(_lock);
+    template<typename T, typename D,typename C>
+    void Vin_TaskPriorityQueue<T, D, C>::push_back(D &qt) {
+        std::unique_lock<std::mutex> lck(this->_lock);
 
         while (!qt.empty()) {
-            _queue.push(qt.top());
-            qt.pop();
-            ++_size;
-            _cond.notify_one();
+            this->_pqueue.push(qt.front());
+            qt.pop_front();
+            ++this->_size;
+            this->_cond.notify_one();
         }
     }
 

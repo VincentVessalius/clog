@@ -152,6 +152,33 @@ Vin_Exception.cpp.s:
 	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.s
 .PHONY : Vin_Exception.cpp.s
 
+Vin_Task.o: Vin_Task.cpp.o
+
+.PHONY : Vin_Task.o
+
+# target to build an object file
+Vin_Task.cpp.o:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o
+.PHONY : Vin_Task.cpp.o
+
+Vin_Task.i: Vin_Task.cpp.i
+
+.PHONY : Vin_Task.i
+
+# target to preprocess a source file
+Vin_Task.cpp.i:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.i
+.PHONY : Vin_Task.cpp.i
+
+Vin_Task.s: Vin_Task.cpp.s
+
+.PHONY : Vin_Task.s
+
+# target to generate assembly for a file
+Vin_Task.cpp.s:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.s
+.PHONY : Vin_Task.cpp.s
+
 Vin_Thread.o: Vin_Thread.cpp.o
 
 .PHONY : Vin_Thread.o
@@ -272,6 +299,9 @@ help:
 	@echo "... Vin_Exception.o"
 	@echo "... Vin_Exception.i"
 	@echo "... Vin_Exception.s"
+	@echo "... Vin_Task.o"
+	@echo "... Vin_Task.i"
+	@echo "... Vin_Task.s"
 	@echo "... Vin_Thread.o"
 	@echo "... Vin_Thread.i"
 	@echo "... Vin_Thread.s"

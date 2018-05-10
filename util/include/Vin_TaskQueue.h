@@ -163,8 +163,8 @@ namespace vince {
     void Vin_TaskQueue<T, D>::push_back(const queueType &qt) {
         std::unique_lock<std::mutex> lck(_lock);
 
-        typename queueType::const_iterator it = qt.begin();
-        typename queueType::const_iterator itEnd = qt.end();
+        auto it = qt.begin();
+        auto itEnd = qt.end();
         while (it != itEnd) {
             _queue.push_back(*it);
             ++it;
@@ -186,8 +186,8 @@ namespace vince {
     void Vin_TaskQueue<T, D>::push_front(const queueType &qt) {
         std::unique_lock<std::mutex> lck(_lock);
 
-        typename queueType::const_iterator it = qt.begin();
-        typename queueType::const_iterator itEnd = qt.end();
+        auto it = qt.begin();
+        auto itEnd = qt.end();
         while (it != itEnd) {
             _queue.push_front(*it);
             ++it;
