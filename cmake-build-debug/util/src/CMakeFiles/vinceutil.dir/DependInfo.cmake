@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o"
+  "/home/cyz/CLionProjects/clog/util/src/Vin_Task.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o"
   "/home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o"
   "/home/cyz/CLionProjects/clog/util/src/Vin_ThreadPool.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o"
   "/home/cyz/CLionProjects/clog/util/src/log.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/log.cpp.o"

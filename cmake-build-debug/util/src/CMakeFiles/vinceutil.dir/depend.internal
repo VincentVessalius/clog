@@ -4,6 +4,9 @@
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o
  ..//util/include/Vin_Exception.h
  /home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp
+util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o
+ ..//util/include/Vin_Task.h
+ /home/cyz/CLionProjects/clog/util/src/Vin_Task.cpp
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o
  ..//util/include/Vin_Thread.h
  ../util/include/Vin_Exception.h

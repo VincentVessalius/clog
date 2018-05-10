@@ -158,6 +158,9 @@
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
+		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Task.cpp">
+			<Option target="vinceutil"/>
+		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp">
 			<Option target="vinceutil"/>
 		</Unit>

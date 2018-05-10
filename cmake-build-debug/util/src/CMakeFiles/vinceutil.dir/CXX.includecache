@@ -14,6 +14,8 @@ cstring
 cerrno
 -
 
+..//util/include/Vin_Task.h
+
 ..//util/include/Vin_Thread.h
 pthread.h
 -
@@ -125,6 +127,10 @@ util/include/Vin_Exception.h
 /home/cyz/CLionProjects/clog/util/src/util/include/Vin_Exception.h
 execinfo.h
 -
+
+/home/cyz/CLionProjects/clog/util/src/Vin_Task.cpp
+util/include/Vin_Task.h
+/home/cyz/CLionProjects/clog/util/src/util/include/Vin_Task.h
 
 /home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp
 thread
