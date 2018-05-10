@@ -10,7 +10,7 @@ using namespace vince;
 
 int main() {
     Vin_ThreadPool testPool;
-    testPool.init(1);
+    testPool.init(4);
 
     auto init_fn = []() -> void { cout << pthread_self() << endl; };
 
@@ -18,15 +18,23 @@ int main() {
 
     testPool.start();
 
-    auto exec_fn = [] {
-        cout << "a:" << pthread_self() << endl;
-        sleep(1);
-        return;
+    function<void(void)> exec_fn[2] = {
+        [] {
+            cout << "a:" << pthread_self() << endl;
+            sleep(1);
+            return;
+        },
+        [] {
+            cout << "b:" << pthread_self() << endl;
+            sleep(1);
+            return;
+        }
     };
+
 
     int i = 10;
     while (i) {
-        testPool.exec(make_shared<function<void(void)>>(exec_fn));
+        testPool.exec(make_shared<function<void(void)>>(exec_fn[i%2]));
         --i;
     }
 

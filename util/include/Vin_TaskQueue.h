@@ -120,7 +120,7 @@ namespace vince {
                 _cond.wait(lck);
             } else {
                 //超时了
-                if (_cond.wait_for(lck, std::chrono::milliseconds(millsecond))==std::cv_status::timeout) {
+                if (_cond.wait_for(lck, std::chrono::milliseconds(millsecond)) == std::cv_status::timeout) {
                     return false;
                 }
             }
@@ -146,6 +146,7 @@ namespace vince {
     template<typename T, typename D>
     void Vin_TaskQueue<T, D>::notifyT() {
         std::unique_lock<std::mutex> lck(_lock);
+
         _cond.notify_all();
     }
 
@@ -154,7 +155,6 @@ namespace vince {
         std::unique_lock<std::mutex> lck(_lock);
 
         _cond.notify_one();
-
         _queue.push_back(t);
         ++_size;
     }
@@ -178,9 +178,7 @@ namespace vince {
         std::unique_lock<std::mutex> lck(_lock);
 
         _cond.notify_one();
-
         _queue.push_front(t);
-
         ++_size;
     }
 
@@ -194,7 +192,6 @@ namespace vince {
             _queue.push_front(*it);
             ++it;
             ++_size;
-
             _cond.notify_one();
         }
     }
@@ -211,7 +208,7 @@ namespace vince {
                 _cond.wait(lck);
             } else {
                 //超时了
-                if (_cond.wait_for(lck, std::chrono::milliseconds(millsecond))==std::cv_status::timeout) {
+                if (_cond.wait_for(lck, std::chrono::milliseconds(millsecond)) == std::cv_status::timeout) {
                     return false;
                 }
             }
@@ -231,6 +228,7 @@ namespace vince {
     template<typename T, typename D>
     size_t Vin_TaskQueue<T, D>::size() {
         std::unique_lock<std::mutex> lck(_lock);
+
         //return _queue.size();
         return _size;
     }
@@ -238,6 +236,7 @@ namespace vince {
     template<typename T, typename D>
     void Vin_TaskQueue<T, D>::clear() {
         std::unique_lock<std::mutex> lck(_lock);
+
         _queue.clear();
         _size = 0;
     }
@@ -245,10 +244,10 @@ namespace vince {
     template<typename T, typename D>
     bool Vin_TaskQueue<T, D>::empty() {
         std::unique_lock<std::mutex> lck(_lock);
+
         return _queue.empty();
     }
 
 }
-
 
 #endif //CLOG_TEST_VIN_TASKQUEUE_H

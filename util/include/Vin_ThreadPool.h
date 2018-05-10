@@ -29,10 +29,6 @@ namespace vince {
 
         void init(const size_t &);
 
-        size_t getThreadNum();
-
-        size_t getJobNum();
-
         void start();
 
         void stop();
@@ -42,6 +38,10 @@ namespace vince {
         void exec(std::shared_ptr<Vin_Function>);
 
         bool waitForAllDone(int millsecond = -1);
+
+        size_t getThreadNum();
+
+        size_t getJobNum();
 
     public:
         /**
