@@ -22,8 +22,8 @@ int InitLog(std::string tmpDir) {
         return -1;
     if (!(logInfoF = fopen((logDir + "/INFO").c_str(), "a+")))
         return -1;
-    setvbuf(logErrF,NULL,_IOLBF,512);
-    setvbuf(logWarnF,NULL,_IOLBF,512);
-    setvbuf(logInfoF,NULL,_IOLBF,512);
+    setvbuf(logErrF, NULL, _IOLBF, 512);
+    setvbuf(logWarnF, NULL, _IOLBF, 512);
+    setvbuf(logInfoF, NULL, _IOLBF, 512);
     return 0;
 }

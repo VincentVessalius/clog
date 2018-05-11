@@ -20,7 +20,7 @@ namespace vince {
         ~Vin_ThreadPool_Exception() noexcept override = default;
     };
 
-    template <typename T=std::shared_ptr<Vin_Task>,typename Q=vince::Vin_TaskQueue<T> >
+    template<typename T=std::shared_ptr<Vin_Task>, typename Q=vince::Vin_TaskQueue<T> >
     class Vin_ThreadPool {
     public:
         Vin_ThreadPool();
@@ -33,9 +33,9 @@ namespace vince {
 
         void stop();
 
-        void setThdInitFunc(const T&);
+        void setThdInitFunc(const T &);
 
-        void exec(const T&);
+        void exec(const T &);
 
         bool waitForAllDone(int millsecond = -1);
 
@@ -141,7 +141,7 @@ namespace vince {
             void terminate();
 
         protected:
-            virtual void run() override ;
+            virtual void run() override;
 
         protected:
 
@@ -159,9 +159,9 @@ namespace vince {
 
         void exit();
 
-        void idle(ThreadWorker * const);
+        void idle(ThreadWorker *const);
 
-        T get(ThreadWorker* const);
+        T get(ThreadWorker *const);
 
         T get();
 
@@ -180,12 +180,12 @@ namespace vince {
         /**
          * 工作线程
          */
-        std::vector<ThreadWorker* > _jobthread;
+        std::vector<ThreadWorker *> _jobthread;
 
         /**
          * 繁忙线程
          */
-        std::set<ThreadWorker* > _busythread;
+        std::set<ThreadWorker *> _busythread;
 
         /**
          * lock for ThreadPool
@@ -208,18 +208,18 @@ namespace vince {
 
 /////////////////////////////////////////////////////////////////
 //cyz-> Implementation of ThreadData
-    template <typename T,typename Q> pthread_key_t Vin_ThreadPool<T, Q>::g_key;
+    template<typename T, typename Q> pthread_key_t Vin_ThreadPool<T, Q>::g_key;
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     typename Vin_ThreadPool<T, Q>::KeyInitializer Vin_ThreadPool<T, Q>::g_key_initializer;
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::destructor(void *p) {
         auto *ttd = (Vin_ThreadPool<T, Q>::ThreadData *) p;
         delete ttd;
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::setThreadData(Vin_ThreadPool<T, Q>::ThreadData *p) {
         Vin_ThreadPool<T, Q>::ThreadData *pOld = getThreadData();
         if (pOld == p)
@@ -233,12 +233,12 @@ namespace vince {
         }
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     typename Vin_ThreadPool<T, Q>::ThreadData *Vin_ThreadPool<T, Q>::getThreadData() {
         return (Vin_ThreadPool<T, Q>::ThreadData *) pthread_getspecific(g_key);
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::setThreadData(pthread_key_t pkey, ThreadData *p) {
         Vin_ThreadPool<T, Q>::ThreadData *pOld = getThreadData(pkey);
         if (pOld == p)
@@ -252,44 +252,44 @@ namespace vince {
         }
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     typename Vin_ThreadPool<T, Q>::ThreadData *Vin_ThreadPool<T, Q>::getThreadData(pthread_key_t pkey) {
         return (ThreadData *) pthread_getspecific(pkey);
     }
 
 ////////////////////////////////////////////////////////////////
 //cyz-> Implementation of ThreadWorker
-    template <typename T,typename Q>
-    Vin_ThreadPool<T, Q>::ThreadWorker::ThreadWorker(Vin_ThreadPool<T, Q> * tpool) : _tpool(tpool), _b_terminate(false) {
+    template<typename T, typename Q>
+    Vin_ThreadPool<T, Q>::ThreadWorker::ThreadWorker(Vin_ThreadPool<T, Q> *tpool) : _tpool(tpool), _b_terminate(false) {
 
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::ThreadWorker::run() {
         //调用初始化部分
         auto pst = _tpool->get();
 
-        if(pst!=NULL){
+        if (pst != NULL) {
             try {
                 (*pst)();
             }
             catch (...) {
             }
 
-            pst=NULL;
+            pst = NULL;
         }
 
         //调用处理部分
         while (!_b_terminate) {
             auto pfw = _tpool->get(this);
-            if(pfw!=NULL){
+            if (pfw != NULL) {
                 try {
                     (*pfw)();
                 }
                 catch (...) {
                 }
             }
-            pfw=NULL;
+            pfw = NULL;
             _tpool->idle(this);
         }
 
@@ -297,7 +297,7 @@ namespace vince {
         _tpool->exit();
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::ThreadWorker::terminate() {
         _b_terminate = true;
         //cyz-> wake up all threads who are using ThreadPool::get(ThreadWorker)
@@ -306,18 +306,18 @@ namespace vince {
 
 ////////////////////////////////////////////////////////////////
 //cyz-> Implementation of ThreadPool
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     Vin_ThreadPool<T, Q>::Vin_ThreadPool() : _bAllDone(true) {
 
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     Vin_ThreadPool<T, Q>::~Vin_ThreadPool() {
         stop();
         clear();
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::init(const size_t &num) {
         stop();
 
@@ -330,7 +330,7 @@ namespace vince {
         }
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::stop() {
         std::unique_lock<std::mutex> lck(_lock);
 
@@ -345,7 +345,7 @@ namespace vince {
         _bAllDone = true;
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::clear() {
         auto it = _jobthread.begin();
         while (it != _jobthread.end()) {
@@ -356,7 +356,7 @@ namespace vince {
         _busythread.clear();
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::start() {
         std::unique_lock<std::mutex> lck(_lock);
 
@@ -368,24 +368,24 @@ namespace vince {
         _bAllDone = false;
     }
 
-    template <typename T,typename Q>
-    void Vin_ThreadPool<T, Q>::setThdInitFunc(const T& init_fn) {
+    template<typename T, typename Q>
+    void Vin_ThreadPool<T, Q>::setThdInitFunc(const T &init_fn) {
         for (size_t i = 0; i < _jobthread.size(); i++) {
             _startqueue.push_back(init_fn);
         }
     }
 
-    template <typename T,typename Q>
-    void Vin_ThreadPool<T, Q>::exec(const T& init_fn) {
+    template<typename T, typename Q>
+    void Vin_ThreadPool<T, Q>::exec(const T &init_fn) {
         _jobqueue.push_back(init_fn);
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     bool Vin_ThreadPool<T, Q>::isFinish() {
         return _startqueue.empty() && _jobqueue.empty() && _busythread.empty() && _bAllDone;
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::idle(ThreadWorker *const ptw) {
         std::unique_lock<std::mutex> lck(_tqlock);
         _busythread.erase(ptw);
@@ -398,7 +398,7 @@ namespace vince {
     }
 
     //TODO
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::exit() {
         Vin_ThreadPool<T, Q>::ThreadData *p = getThreadData();
         if (p) {
@@ -412,7 +412,7 @@ namespace vince {
         _jobqueue.clear();
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     bool Vin_ThreadPool<T, Q>::waitForAllDone(int millsecond) {
         std::unique_lock<std::mutex> lck(_tqlock);
 
@@ -433,9 +433,9 @@ namespace vince {
         return false;
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     T Vin_ThreadPool<T, Q>::get(ThreadWorker *const ptw) {
-        T pFunctor=NULL;
+        T pFunctor = NULL;
         if (!_jobqueue.pop_front(pFunctor, 1000)) {
             return NULL;
         }
@@ -446,9 +446,9 @@ namespace vince {
         return pFunctor;
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     T Vin_ThreadPool<T, Q>::get() {
-        T pFunctor=NULL;
+        T pFunctor = NULL;
         if (!_startqueue.pop_front(pFunctor)) {
             return NULL;
         }
@@ -456,18 +456,18 @@ namespace vince {
         return pFunctor;
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::notifyT() {
         _jobqueue.notifyT();
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     size_t Vin_ThreadPool<T, Q>::getThreadNum() {
         std::unique_lock<std::mutex> lck(_lock);
         return _jobthread.size();
     }
 
-    template <typename T,typename Q>
+    template<typename T, typename Q>
     size_t Vin_ThreadPool<T, Q>::getJobNum() {
         std::unique_lock<std::mutex> lck(_lock);
         return _jobqueue.size();

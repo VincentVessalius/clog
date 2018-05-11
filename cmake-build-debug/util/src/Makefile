@@ -125,6 +125,60 @@ vinceutil/fast:
 	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/build
 .PHONY : vinceutil/fast
 
+Vin_Base64.o: Vin_Base64.cpp.o
+
+.PHONY : Vin_Base64.o
+
+# target to build an object file
+Vin_Base64.cpp.o:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o
+.PHONY : Vin_Base64.cpp.o
+
+Vin_Base64.i: Vin_Base64.cpp.i
+
+.PHONY : Vin_Base64.i
+
+# target to preprocess a source file
+Vin_Base64.cpp.i:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.i
+.PHONY : Vin_Base64.cpp.i
+
+Vin_Base64.s: Vin_Base64.cpp.s
+
+.PHONY : Vin_Base64.s
+
+# target to generate assembly for a file
+Vin_Base64.cpp.s:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.s
+.PHONY : Vin_Base64.cpp.s
+
+Vin_Codec.o: Vin_Codec.cpp.o
+
+.PHONY : Vin_Codec.o
+
+# target to build an object file
+Vin_Codec.cpp.o:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o
+.PHONY : Vin_Codec.cpp.o
+
+Vin_Codec.i: Vin_Codec.cpp.i
+
+.PHONY : Vin_Codec.i
+
+# target to preprocess a source file
+Vin_Codec.cpp.i:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.i
+.PHONY : Vin_Codec.cpp.i
+
+Vin_Codec.s: Vin_Codec.cpp.s
+
+.PHONY : Vin_Codec.s
+
+# target to generate assembly for a file
+Vin_Codec.cpp.s:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.s
+.PHONY : Vin_Codec.cpp.s
+
 Vin_Exception.o: Vin_Exception.cpp.o
 
 .PHONY : Vin_Exception.o
@@ -296,6 +350,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... vinceutil"
+	@echo "... Vin_Base64.o"
+	@echo "... Vin_Base64.i"
+	@echo "... Vin_Base64.s"
+	@echo "... Vin_Codec.o"
+	@echo "... Vin_Codec.i"
+	@echo "... Vin_Codec.s"
 	@echo "... Vin_Exception.o"
 	@echo "... Vin_Exception.i"
 	@echo "... Vin_Exception.s"
