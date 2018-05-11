@@ -155,6 +155,9 @@
 		<Unit filename="/home/cyz/CLionProjects/clog/daemon/testThread.h">
 			<Option target="clog_test"/>
 		</Unit>
+		<Unit filename="/home/cyz/CLionProjects/clog/util/include/Vin_Comparers.h">
+			<Option target="vinceutil"/>
+		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
