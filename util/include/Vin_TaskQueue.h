@@ -2,8 +2,8 @@
 // Created by cyz on 5/9/18.
 //
 
-#ifndef CLOG_TEST_VIN_TASKQUEUE_H
-#define CLOG_TEST_VIN_TASKQUEUE_H
+#ifndef CLOG_VIN_TASKQUEUE_H
+#define CLOG_VIN_TASKQUEUE_H
 
 #include <deque>
 #include <cstddef>
@@ -250,4 +250,4 @@ namespace vince {
 
 }
 
-#endif //CLOG_TEST_VIN_TASKQUEUE_H
+#endif //CLOG_VIN_TASKQUEUE_H

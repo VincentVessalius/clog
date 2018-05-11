@@ -2,8 +2,8 @@
 // Created by cyz on 5/9/18.
 //
 
-#ifndef CLOG_TEST_VIN_TASKPRIORITYQUEUE_H
-#define CLOG_TEST_VIN_TASKPRIORITYQUEUE_H
+#ifndef CLOG_VIN_TASKPRIORITYQUEUE_H
+#define CLOG_VIN_TASKPRIORITYQUEUE_H
 
 #include <queue>
 #include <cstddef>
@@ -126,4 +126,4 @@ namespace vince {
 }
 
 
-#endif //CLOG_TEST_VIN_TASKPRIORITYQUEUE_H
+#endif //CLOG_VIN_TASKPRIORITYQUEUE_H

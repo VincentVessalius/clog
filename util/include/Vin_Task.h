@@ -2,8 +2,8 @@
 // Created by cyz on 5/10/18.
 //
 
-#ifndef CLOG_TEST_VIN_TASK_H
-#define CLOG_TEST_VIN_TASK_H
+#ifndef CLOG_VIN_TASK_H
+#define CLOG_VIN_TASK_H
 
 #include <functional>
 
@@ -39,4 +39,4 @@ namespace vince{
 
 
 
-#endif //CLOG_TEST_VIN_TASK_H
+#endif //CLOG_VIN_TASK_H
