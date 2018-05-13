@@ -32,8 +32,7 @@ namespace vince {
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     };
 
-    //TODO
-    std::string Vin_Base64::encode(const std::string &data) {
+    std::string Vin_Base64::encode(const std::string &data) throw(Vin_Codec_Exception) {
         int max_len = (data.length() / 3 * 4 + data.length() % 3 * 2) + 1;
         char *tmp = new char[max_len];
         int len = encode((const unsigned char *) data.c_str(), data.length(), tmp);
@@ -41,13 +40,13 @@ namespace vince {
             throw Vin_Codec_Exception("[Vin_Base64::encode] length is greater than max_len");
         }
         std::string ret(tmp);
-        delete tmp;
+        delete[] tmp;
         std::cout << ret << std::endl;
         return ret;
     }
 
-    std::string Vin_Base64::decode(const std::string &data) {
-        unsigned long max_len = (data.length() / 4 * 3 + data.length() % 4 ) + 1;
+    std::string Vin_Base64::decode(const std::string &data) throw(Vin_Codec_Exception) {
+        unsigned long max_len = (data.length() / 4 * 3 + data.length() % 4) + 1;
         auto *tmp = new char[max_len];
 
         int len = decode((const unsigned char *) data.c_str(), data.length(), tmp);
@@ -55,13 +54,13 @@ namespace vince {
             throw Vin_Codec_Exception("[Vin_Base64::encode] length is greater than max_len");
         }
         std::string ret(tmp);
-        delete tmp;
+        delete[] tmp;
 
         std::cout << ret << std::endl;
         return ret;
     }
 
-    int Vin_Base64::encode(const unsigned char *pSrc, int nSrcLen, char *pDst) {
+    int Vin_Base64::encode(const unsigned char *pSrc, int nSrcLen, char *pDst) throw(Vin_Codec_Exception) {
         if (nSrcLen <= 0 || pSrc == nullptr || pDst == nullptr) {
             throw Vin_Codec_Exception("[Vin_Base64::encode] nSrcLen error or pSrc/pDst is NULL");
         }
@@ -92,7 +91,7 @@ namespace vince {
         return j;
     }
 
-    int Vin_Base64::decode(const unsigned char *pSrc, int nSrcLen, char *pDst) {
+    int Vin_Base64::decode(const unsigned char *pSrc, int nSrcLen, char *pDst) throw(Vin_Codec_Exception) {
         if (nSrcLen <= 0 || pSrc == nullptr || pDst == nullptr) {
             throw Vin_Codec_Exception("[Vin_Base64::decode] nSrcLen error or pSrc/pDst is NULL");
         }
@@ -100,7 +99,8 @@ namespace vince {
         unsigned int tmp;
         int i, j;
         for (i = 0, j = 0; i < nSrcLen - 3; i += 4) {
-            tmp = DeBase64Tab[pSrc[i]] << 18 | DeBase64Tab[pSrc[i + 1]] << 12 | DeBase64Tab[pSrc[i + 2]]<<6|DeBase64Tab[pSrc[i+3]];
+            tmp = DeBase64Tab[pSrc[i]] << 18 | DeBase64Tab[pSrc[i + 1]] << 12 | DeBase64Tab[pSrc[i + 2]] << 6 |
+                  DeBase64Tab[pSrc[i + 3]];
             pDst[j++] = tmp >> 16;
             pDst[j++] = tmp >> 8 & 0xFF;
             pDst[j++] = tmp & 0xFF;
@@ -108,10 +108,10 @@ namespace vince {
 
         int fag = nSrcLen - i;
         if (fag == 2) {
-            tmp = DeBase64Tab[pSrc[i]] << 6 | DeBase64Tab[pSrc[i+1]];
-            pDst[j++] = tmp>>4;
+            tmp = DeBase64Tab[pSrc[i]] << 6 | DeBase64Tab[pSrc[i + 1]];
+            pDst[j++] = tmp >> 4;
         } else if (fag == 3) {
-            tmp = DeBase64Tab[pSrc[i]] << 12 | DeBase64Tab[pSrc[i+1]]<<6|DeBase64Tab[pSrc[i+2]];
+            tmp = DeBase64Tab[pSrc[i]] << 12 | DeBase64Tab[pSrc[i + 1]] << 6 | DeBase64Tab[pSrc[i + 2]];
             pDst[j++] = tmp >> 10;
             pDst[j++] = tmp >> 2 & 0xFF;
         }

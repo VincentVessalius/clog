@@ -17,6 +17,7 @@ namespace vince {
         Vin_Codec_Exception(const std::string &buffer, int err) noexcept : Vin_Exception(buffer, err) {};
 
         ~Vin_Codec_Exception() noexcept override = default;
+        
     };
 
     class Vin_Codec {

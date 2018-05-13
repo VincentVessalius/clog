@@ -23,8 +23,19 @@ int main() {
      * cyz-> Test for Vin_Singleton and Vin_Base64
      *
     Vin_Codec* ccc=Vin_Singleton<Vin_Base64>::getInstance();
-    string x=ccc->encode("cuiyuanzhen94shihaorenHAORENA");
-    ccc->decode(x);*/
+    string x;
+    try {
+        x=ccc->encode("");
+    }catch (Vin_Codec_Exception ex){
+        cout<<ex.what();
+    }
+
+    try {
+        ccc->decode(x);
+    }catch (Vin_Codec_Exception ex){
+        cout<<ex.what();
+    }
+    */
 
     /***********************************************************************
      * cyz-> Test for Vin_ThreadPool using Vin_TaskPriorityQueue
