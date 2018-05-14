@@ -21,7 +21,7 @@ int main() {
 
     /***********************************************************************
      * cyz-> Test for Vin_Singleton and Vin_Base64
-     **/
+     *
     Vin_Codec* ccc=Vin_Singleton<Vin_Base64>::getInstance();
     string x;
     try {
@@ -35,7 +35,7 @@ int main() {
     }catch (Vin_Codec_Exception ex){
         cout<<ex.what();
     }
-    /**/
+    */
 
     /***********************************************************************
      * cyz-> Test for Vin_ThreadPool using Vin_TaskPriorityQueue
@@ -72,9 +72,9 @@ int main() {
 
     /***********************************************************************
      * cyz-> Test for Vin_ThreadPool and Vin_Task
-     *
-    Vin_ThreadPool testPool;
-    testPool.init(4);
+     **/
+    Vin_ThreadPool<> testPool;
+    testPool.init(1);
 
     auto init_fn = []() -> void { cout << pthread_self() << endl; };
 
@@ -85,12 +85,12 @@ int main() {
     function<void(void)> exec_fn[2] = {
         [] {
             cout << "a:" << pthread_self() << endl;
-            sleep(1);
+            sleep(4);
             return;
         },
         [] {
             cout << "b:" << pthread_self() << endl;
-            sleep(1);
+            sleep(4);
             return;
         }
     };
@@ -101,13 +101,14 @@ int main() {
         testPool.exec(make_shared<Vin_Task>(exec_fn[i%2]));
         --i;
     }
+    testPool.addWorkers(1);
 
     //等待线程结束
     cout << "waitForAllDone..." << endl;
     bool b = testPool.waitForAllDone(-1);
     cout << "waitForAllDone..." << b << ":" << testPool.getJobNum() << endl;
 
-    testPool.stop();*/
+    testPool.stop();/**/
 
     /***********************************************************************
      * cyz-> Test for Vin_Thread

@@ -33,6 +33,8 @@ namespace vince {
 
         void stop();
 
+        void addWorkers(const int& num);
+
         void setThdInitFunc(const T &);
 
         void exec(const T &);
@@ -173,9 +175,9 @@ namespace vince {
         Q _jobqueue;
 
         /**
-         * 启动任务
+         * init任务
          */
-        Q _startqueue;
+        T _initjob=nullptr ;
 
         /**
          * 工作线程
@@ -204,6 +206,11 @@ namespace vince {
          * 是否所有任务都执行完毕
          */
         bool _bAllDone;
+
+        /**
+         * is Start?
+         */
+        bool _bStarted;
     };
 
 /////////////////////////////////////////////////////////////////
@@ -305,9 +312,9 @@ namespace vince {
     }
 
 ////////////////////////////////////////////////////////////////
-//cyz-> Implementation of ThreadPool
+//cyz-> Public Implementation of ThreadPool
     template<typename T, typename Q>
-    Vin_ThreadPool<T, Q>::Vin_ThreadPool() : _bAllDone(true) {
+    Vin_ThreadPool<T, Q>::Vin_ThreadPool() : _bAllDone(true),_bStarted(false),_initjob(nullptr) {
 
     }
 
@@ -334,6 +341,8 @@ namespace vince {
     void Vin_ThreadPool<T, Q>::stop() {
         std::unique_lock<std::mutex> lck(_lock);
 
+        _bStarted= false;
+
         auto it = _jobthread.begin();
         while (it != _jobthread.end()) {
             if ((*it)->isRun()) {
@@ -342,23 +351,18 @@ namespace vince {
             }
             ++it;
         }
-        _bAllDone = true;
-    }
 
-    template<typename T, typename Q>
-    void Vin_ThreadPool<T, Q>::clear() {
-        auto it = _jobthread.begin();
-        while (it != _jobthread.end()) {
-            delete (*it);
-            ++it;
-        }
-        _jobthread.clear();
-        _busythread.clear();
+        _initjob= nullptr;
+        _jobqueue.clear();
+
+        _bAllDone = true;
     }
 
     template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::start() {
         std::unique_lock<std::mutex> lck(_lock);
+
+        _bStarted=true;
 
         auto it = _jobthread.begin();
         while (it != _jobthread.end()) {
@@ -370,9 +374,7 @@ namespace vince {
 
     template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::setThdInitFunc(const T &init_fn) {
-        for (size_t i = 0; i < _jobthread.size(); i++) {
-            _startqueue.push_back(init_fn);
-        }
+        _initjob=init_fn;
     }
 
     template<typename T, typename Q>
@@ -381,8 +383,62 @@ namespace vince {
     }
 
     template<typename T, typename Q>
+    bool Vin_ThreadPool<T, Q>::waitForAllDone(int millsecond) {
+        std::unique_lock<std::mutex> lck(_tqlock);
+
+        //永远等待
+        while (millsecond < 0) {
+            if (isFinish()) {
+                return true;
+            }
+            _tqcond.wait_for(lck, std::chrono::seconds(10));
+        }
+
+        std::cv_status b = _tqcond.wait_for(lck, std::chrono::milliseconds(millsecond));
+        //完成处理了
+        if (isFinish()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    template<typename T, typename Q>
+    size_t Vin_ThreadPool<T, Q>::getThreadNum() {
+        std::unique_lock<std::mutex> lck(_lock);
+        return _jobthread.size();
+    }
+
+    template<typename T, typename Q>
+    size_t Vin_ThreadPool<T, Q>::getJobNum() {
+        std::unique_lock<std::mutex> lck(_lock);
+        return _jobqueue.size();
+    }
+
+    template<typename T, typename Q>
+    void Vin_ThreadPool<T, Q>::addWorkers(const int& num) {
+        if(num==0)
+            return;
+        else if(num>0){
+            std::unique_lock<std::mutex> lck(_lock);
+
+            for (size_t i = 0; i < num; i++) {
+                _jobthread.push_back(new ThreadWorker(this));
+                if(_bStarted)(*_jobthread.rbegin())->start();
+            }
+        }else {
+            int orig_num=this->getThreadNum();
+            if(orig_num+num<0){
+                throw Vin_ThreadPool_Exception("[Vin_ThreadPool::addWorkers] the new num of thds is invalid!");
+            }
+            init(orig_num+num);
+        }
+    }
+
+//cyz-> protected and private Implementation of ThreadPool
+    template<typename T, typename Q>
     bool Vin_ThreadPool<T, Q>::isFinish() {
-        return _startqueue.empty() && _jobqueue.empty() && _busythread.empty() && _bAllDone;
+        return _jobqueue.empty() && _busythread.empty() && _bAllDone;
     }
 
     template<typename T, typename Q>
@@ -408,29 +464,17 @@ namespace vince {
                 throw Vin_ThreadPool_Exception("[Vin_ThreadPool::setThreadData] pthread_setspecific error", ret);
             }
         }
-
-        _jobqueue.clear();
     }
 
     template<typename T, typename Q>
-    bool Vin_ThreadPool<T, Q>::waitForAllDone(int millsecond) {
-        std::unique_lock<std::mutex> lck(_tqlock);
-
-        //永远等待
-        while (millsecond < 0) {
-            if (isFinish()) {
-                return true;
-            }
-            _tqcond.wait_for(lck, std::chrono::seconds(1));
+    void Vin_ThreadPool<T, Q>::clear() {
+        auto it = _jobthread.begin();
+        while (it != _jobthread.end()) {
+            delete (*it);
+            ++it;
         }
-
-        std::cv_status b = _tqcond.wait_for(lck, std::chrono::milliseconds(millsecond));
-        //完成处理了
-        if (isFinish()) {
-            return true;
-        }
-
-        return false;
+        _jobthread.clear();
+        _busythread.clear();
     }
 
     template<typename T, typename Q>
@@ -448,29 +492,12 @@ namespace vince {
 
     template<typename T, typename Q>
     T Vin_ThreadPool<T, Q>::get() {
-        T pFunctor = NULL;
-        if (!_startqueue.pop_front(pFunctor)) {
-            return NULL;
-        }
-
-        return pFunctor;
+        return _initjob;
     }
 
     template<typename T, typename Q>
     void Vin_ThreadPool<T, Q>::notifyT() {
         _jobqueue.notifyT();
-    }
-
-    template<typename T, typename Q>
-    size_t Vin_ThreadPool<T, Q>::getThreadNum() {
-        std::unique_lock<std::mutex> lck(_lock);
-        return _jobthread.size();
-    }
-
-    template<typename T, typename Q>
-    size_t Vin_ThreadPool<T, Q>::getJobNum() {
-        std::unique_lock<std::mutex> lck(_lock);
-        return _jobqueue.size();
     }
 
 }
