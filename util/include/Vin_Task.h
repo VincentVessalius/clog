@@ -7,7 +7,7 @@
 
 #include <functional>
 
-namespace vince{
+namespace vince {
     typedef void (*func)();
 
     class Vin_Task {
@@ -19,16 +19,16 @@ namespace vince{
 
         Vin_Task(std::function<void(void)>, int);
 
-        Vin_Task& operator= (const Vin_Task&);
+        Vin_Task &operator=(const Vin_Task &);
 
-        bool operator < (const Vin_Task&) const;
+        bool operator<(const Vin_Task &) const;
 
     public:
         void set_priority(int);
 
         int get_priority() const;
 
-        void operator ()(void);
+        void operator()(void);
 
     private:
         std::function<void(void)> _task;
@@ -36,7 +36,6 @@ namespace vince{
         int _priority;
     };
 }
-
 
 
 #endif //CLOG_VIN_TASK_H

@@ -24,6 +24,20 @@ vector
 util/include/Vin_Thread.h
 ../daemon/util/include/Vin_Thread.h
 
+..//util/include/Vin_Base64.h
+Vin_Codec.h
+../util/include/Vin_Codec.h
+
+..//util/include/Vin_Codec.h
+string
+-
+iostream
+-
+Vin_Singleton.h
+../util/include/Vin_Singleton.h
+Vin_Exception.h
+../util/include/Vin_Exception.h
+
 ..//util/include/Vin_Comparers.h
 bits/shared_ptr.h
 -
@@ -38,6 +52,10 @@ stdexcept
 cstring
 -
 cerrno
+-
+
+..//util/include/Vin_Singleton.h
+mutex
 -
 
 ..//util/include/Vin_Task.h
@@ -106,6 +124,16 @@ unistd.h
 tools.h
 ../util/include/tools.h
 
+../util/include/Vin_Codec.h
+string
+-
+iostream
+-
+Vin_Singleton.h
+../util/include/Vin_Singleton.h
+Vin_Exception.h
+../util/include/Vin_Exception.h
+
 ../util/include/Vin_Comparers.h
 bits/shared_ptr.h
 -
@@ -120,6 +148,10 @@ stdexcept
 cstring
 -
 cerrno
+-
+
+../util/include/Vin_Singleton.h
+mutex
 -
 
 ../util/include/Vin_Task.h
@@ -229,6 +261,12 @@ util/include/Vin_Comparers.h
 /home/cyz/CLionProjects/clog/daemon/main_test/util/include/Vin_Comparers.h
 util/include/Vin_ThreadPool.h
 /home/cyz/CLionProjects/clog/daemon/main_test/util/include/Vin_ThreadPool.h
+util/include/Vin_Singleton.h
+/home/cyz/CLionProjects/clog/daemon/main_test/util/include/Vin_Singleton.h
+util/include/Vin_Codec.h
+/home/cyz/CLionProjects/clog/daemon/main_test/util/include/Vin_Codec.h
+util/include/Vin_Base64.h
+/home/cyz/CLionProjects/clog/daemon/main_test/util/include/Vin_Base64.h
 
 /home/cyz/CLionProjects/clog/daemon/testThread.cpp
 zconf.h

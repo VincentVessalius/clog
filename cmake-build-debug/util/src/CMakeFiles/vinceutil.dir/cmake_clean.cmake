@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o"
+  "CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o"
   "CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o"
   "CMakeFiles/vinceutil.dir/Vin_Task.cpp.o"
   "CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o"

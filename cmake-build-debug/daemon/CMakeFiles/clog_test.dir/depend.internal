@@ -15,15 +15,20 @@ daemon/CMakeFiles/clog_test.dir/Server.cpp.o
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o
  ..//daemon/Server.h
  ..//daemon/testThread.h
+ ..//util/include/Vin_Base64.h
+ ..//util/include/Vin_Codec.h
  ..//util/include/Vin_Comparers.h
  ..//util/include/Vin_Exception.h
+ ..//util/include/Vin_Singleton.h
  ..//util/include/Vin_Task.h
  ..//util/include/Vin_TaskPriorityQueue.h
  ..//util/include/Vin_Thread.h
  ..//util/include/Vin_ThreadPool.h
  ..//util/include/log.h
+ ../util/include/Vin_Codec.h
  ../util/include/Vin_Comparers.h
  ../util/include/Vin_Exception.h
+ ../util/include/Vin_Singleton.h
  ../util/include/Vin_Task.h
  ../util/include/Vin_TaskQueue.h
  ../util/include/Vin_Thread.h

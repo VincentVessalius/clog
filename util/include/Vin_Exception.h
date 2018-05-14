@@ -23,7 +23,7 @@ namespace vince {
 
         ~Vin_Exception() noexcept override = default;
 
-        const char *what()  const noexcept override { return _what.c_str(); };
+        virtual const char *what() const noexcept override { return _what.c_str(); };
 
         int getErrCode() { return _errno; }
 

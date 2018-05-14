@@ -9,13 +9,13 @@
 #include <memory>
 #include "Vin_Task.h"
 
-namespace vince{
+namespace vince {
 
-    template <typename T >
-    class GreaterForPtr{
+    template<typename T>
+    class GreaterForPtr {
     public:
-        bool operator() (T &a,T &b) const{
-            return *a<*b;
+        bool operator()(T &a, T &b) const {
+            return *a < *b;
         };
 
     };

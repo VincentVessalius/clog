@@ -10,15 +10,36 @@
 #include "util/include/Vin_Exception.h"
 #include "util/include/Vin_Comparers.h"
 #include "util/include/Vin_ThreadPool.h"
+#include "util/include/Vin_Singleton.h"
+#include "util/include/Vin_Codec.h"
+#include "util/include/Vin_Base64.h"
 
 using namespace std;
 using namespace vince;
 
 int main() {
 
-    /***********************************************************************git 
-     * cyz-> Test for Vin_ThreadPool using Vin_TaskPriorityQueue
+    /***********************************************************************
+     * cyz-> Test for Vin_Singleton and Vin_Base64
      **/
+    Vin_Codec* ccc=Vin_Singleton<Vin_Base64>::getInstance();
+    string x;
+    try {
+        x=ccc->encode("");
+    }catch (Vin_Codec_Exception ex){
+        cout<<ex.what();
+    }
+
+    try {
+        ccc->decode(x);
+    }catch (Vin_Codec_Exception ex){
+        cout<<ex.what();
+    }
+    /**/
+
+    /***********************************************************************
+     * cyz-> Test for Vin_ThreadPool using Vin_TaskPriorityQueue
+     *
     Vin_ThreadPool<std::shared_ptr<Vin_Task>,Vin_TaskPriorityQueue<std::shared_ptr<Vin_Task> > > testPool;
     testPool.init(4);
 
@@ -47,7 +68,7 @@ int main() {
     cout << "waitForAllDone..." << b << ":" << testPool.getJobNum() << endl;
 
     testPool.stop();
-    /**/
+    */
 
     /***********************************************************************
      * cyz-> Test for Vin_ThreadPool and Vin_Task

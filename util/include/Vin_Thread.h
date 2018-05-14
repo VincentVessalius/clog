@@ -24,7 +24,7 @@ namespace vince {
 
     class Vin_ThreadControl {
     public:
-        Vin_ThreadControl()= default;
+        Vin_ThreadControl() = default;
 
         explicit Vin_ThreadControl(const std::shared_ptr<std::thread> &);
 
@@ -38,7 +38,7 @@ namespace vince {
 
         const std::shared_ptr<std::thread> &getptrThread() const;
 
-        void sleep(const long&);
+        void sleep(const long &);
 
         //yield();
 
@@ -54,9 +54,9 @@ namespace vince {
 
     class Vin_Thread {
     public:
-        Vin_Thread()= default;
+        Vin_Thread() = default;
 
-        virtual ~Vin_Thread()= default;
+        virtual ~Vin_Thread() = default;
 
         Vin_ThreadControl start();
 
@@ -72,10 +72,13 @@ namespace vince {
 
     protected:
         bool _is_running = false;
+
         std::shared_ptr<std::thread> _ptr_thread;
+
         Vin_ThreadControl _thd_control;
-        //Vin_ThreadLock _lock;
+
         std::mutex _thd_lock;
+
         std::condition_variable _thd_cond;
     };
 

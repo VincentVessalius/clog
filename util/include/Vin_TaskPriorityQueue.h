@@ -20,9 +20,10 @@ namespace vince {
     class Vin_TaskPriorityQueue : public Vin_TaskQueue<T, D> {
     public:
         Vin_TaskPriorityQueue() = default;
+
     public:
 
-        typedef std::priority_queue<T,D,C> pqueueType;
+        typedef std::priority_queue<T, D, C> pqueueType;
 
         /**
          * @brief 从头部获取数据, 没有数据则等待.
@@ -33,16 +34,16 @@ namespace vince {
          *                      -1 永久等待
          * @return bool: true, 获取了数据, false, 无数据
          */
-        virtual bool pop_front(T &t, size_t millsecond) override ;
+        virtual bool pop_front(T &t, size_t millsecond) override;
 
-        virtual bool pop_front(T &t) override ;
+        virtual bool pop_front(T &t) override;
 
         /**
          * @brief 放数据到队列后端.
          *
          * @param t
          */
-        virtual void push_back(const T &t) override ;
+        virtual void push_back(const T &t) override;
 
         /**
          * @brief  放数据到队列后端.
@@ -52,11 +53,11 @@ namespace vince {
         virtual void push_back(D &qt);
 
     protected:
-        void push_front(const T &t) final{
+        void push_front(const T &t) final {
             return;
         }
 
-        void push_front(const D &qt) final{
+        void push_front(const D &qt) final {
             return;
         };
 
@@ -65,7 +66,7 @@ namespace vince {
 
     };
 
-    template<typename T, typename D,typename C>
+    template<typename T, typename D, typename C>
     bool Vin_TaskPriorityQueue<T, D, C>::pop_front(T &t, size_t millsecond) {
         std::unique_lock<std::mutex> lck(this->_lock);
 
@@ -95,13 +96,13 @@ namespace vince {
         return true;
     }
 
-    template<typename T, typename D,typename C>
-    bool Vin_TaskPriorityQueue<T,D,C>::pop_front(T &t) {
-        pop_front(t,0);
+    template<typename T, typename D, typename C>
+    bool Vin_TaskPriorityQueue<T, D, C>::pop_front(T &t) {
+        pop_front(t, 0);
     }
 
-    template<typename T, typename D,typename C>
-    void Vin_TaskPriorityQueue<T,D,C>::push_back(const T &t) {
+    template<typename T, typename D, typename C>
+    void Vin_TaskPriorityQueue<T, D, C>::push_back(const T &t) {
         std::unique_lock<std::mutex> lck(this->_lock);
 
         this->_cond.notify_one();
@@ -111,7 +112,7 @@ namespace vince {
     }
 
     //TODO
-    template<typename T, typename D,typename C>
+    template<typename T, typename D, typename C>
     void Vin_TaskPriorityQueue<T, D, C>::push_back(D &qt) {
         std::unique_lock<std::mutex> lck(this->_lock);
 
