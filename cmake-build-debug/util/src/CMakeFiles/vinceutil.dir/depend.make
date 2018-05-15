@@ -7,13 +7,14 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o: ../util/include/Vin_Exceptio
 util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o: ../util/include/Vin_Singleton.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o: ../util/src/Vin_Base64.cpp
 
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o: ../util/include/Vin_Codec.h
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o: ../util/include/Vin_Exception.h
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o: ../util/include/Vin_Singleton.h
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o: ../util/src/Vin_Codec.cpp
+util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: ../util/include/Vin_Buffer.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: ../util/src/Vin_Buffer.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/src/Vin_Exception.cpp
+
+util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o: ../util/include/Vin_MemoryPool.h
+util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o: ../util/src/Vin_MemoryPool.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o: ../util/include/Vin_Task.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o: ../util/src/Vin_Task.cpp
@@ -21,13 +22,6 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o: ../util/src/Vin_Task.cpp
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/include/Vin_Thread.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/src/Vin_Thread.cpp
-
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_ThreadPool.h
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_Exception.h
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_Task.h
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_TaskQueue.h
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/include/Vin_Thread.h
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/src/Vin_ThreadPool.cpp
 
 util/src/CMakeFiles/vinceutil.dir/log.cpp.o: ../util/include/log.h
 util/src/CMakeFiles/vinceutil.dir/log.cpp.o: ../util/include/tools.h

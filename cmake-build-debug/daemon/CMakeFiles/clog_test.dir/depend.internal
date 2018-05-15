@@ -19,6 +19,7 @@ daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o
  ..//util/include/Vin_Codec.h
  ..//util/include/Vin_Comparers.h
  ..//util/include/Vin_Exception.h
+ ..//util/include/Vin_MemoryPool.h
  ..//util/include/Vin_Singleton.h
  ..//util/include/Vin_Task.h
  ..//util/include/Vin_TaskPriorityQueue.h

@@ -8,7 +8,7 @@
 namespace vince {
     bool Vin_Exception::rcd_backtrace = false;
 
-    void Vin_Exception::getBacktrace() {
+    void Vin_Exception::_getBacktrace() {
         void *array[64];
         int nSize = backtrace(array, 64);
         char **symbols = backtrace_symbols(array, nSize);

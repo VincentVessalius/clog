@@ -54,6 +54,16 @@ cstring
 cerrno
 -
 
+..//util/include/Vin_MemoryPool.h
+cstddef
+-
+vector
+-
+list
+-
+mutex
+-
+
 ..//util/include/Vin_Singleton.h
 mutex
 -
@@ -267,6 +277,8 @@ util/include/Vin_Codec.h
 /home/cyz/CLionProjects/clog/daemon/main_test/util/include/Vin_Codec.h
 util/include/Vin_Base64.h
 /home/cyz/CLionProjects/clog/daemon/main_test/util/include/Vin_Base64.h
+util/include/Vin_MemoryPool.h
+/home/cyz/CLionProjects/clog/daemon/main_test/util/include/Vin_MemoryPool.h
 
 /home/cyz/CLionProjects/clog/daemon/testThread.cpp
 zconf.h

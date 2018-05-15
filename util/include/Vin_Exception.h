@@ -13,12 +13,16 @@ namespace vince {
 
     class Vin_Exception : public std::exception {
     public:
-        explicit Vin_Exception(const std::string &str) : _what(str), _errno(0) { if (rcd_backtrace)getBacktrace(); };
+        explicit Vin_Exception(const std::string &str) : _what(str), _errno(0) {
+            if (rcd_backtrace)
+                _getBacktrace();
+        };
 
         Vin_Exception(const std::string &str, int err) {
             _what = str + " : " + strerror(err);
             _errno = err;
-            if (rcd_backtrace)getBacktrace();
+            if (rcd_backtrace)
+                _getBacktrace();
         }
 
         ~Vin_Exception() noexcept override = default;
@@ -31,7 +35,7 @@ namespace vince {
 
         static bool rcd_backtrace;
     private:
-        void getBacktrace();
+        void _getBacktrace();
 
     private:
 

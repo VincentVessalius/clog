@@ -81,28 +81,28 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o.provides: util/src/CMakeFiles
 util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o.provides.build: util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o
 
 
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o: util/src/CMakeFiles/vinceutil.dir/flags.make
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o: ../util/src/Vin_Codec.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o"
-	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o -c /home/cyz/CLionProjects/clog/util/src/Vin_Codec.cpp
+util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: util/src/CMakeFiles/vinceutil.dir/flags.make
+util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: ../util/src/Vin_Buffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o"
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o -c /home/cyz/CLionProjects/clog/util/src/Vin_Buffer.cpp
 
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vinceutil.dir/Vin_Codec.cpp.i"
-	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyz/CLionProjects/clog/util/src/Vin_Codec.cpp > CMakeFiles/vinceutil.dir/Vin_Codec.cpp.i
+util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.i"
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyz/CLionProjects/clog/util/src/Vin_Buffer.cpp > CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.i
 
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vinceutil.dir/Vin_Codec.cpp.s"
-	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyz/CLionProjects/clog/util/src/Vin_Codec.cpp -o CMakeFiles/vinceutil.dir/Vin_Codec.cpp.s
+util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.s"
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyz/CLionProjects/clog/util/src/Vin_Buffer.cpp -o CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.s
 
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o.requires:
+util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o.requires:
 
-.PHONY : util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o.requires
+.PHONY : util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o.requires
 
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o.provides: util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o.requires
-	$(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o.provides.build
-.PHONY : util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o.provides
+util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o.provides: util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o.requires
+	$(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o.provides.build
+.PHONY : util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o.provides
 
-util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o.provides.build: util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o
+util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o.provides.build: util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o
 
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: util/src/CMakeFiles/vinceutil.dir/flags.make
@@ -129,9 +129,33 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o.provides: util/src/CMakeFi
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o.provides.build: util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o
 
 
+util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o: util/src/CMakeFiles/vinceutil.dir/flags.make
+util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o: ../util/src/Vin_MemoryPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o"
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o -c /home/cyz/CLionProjects/clog/util/src/Vin_MemoryPool.cpp
+
+util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.i"
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyz/CLionProjects/clog/util/src/Vin_MemoryPool.cpp > CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.i
+
+util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.s"
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyz/CLionProjects/clog/util/src/Vin_MemoryPool.cpp -o CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.s
+
+util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o.requires:
+
+.PHONY : util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o.requires
+
+util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o.provides: util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o.requires
+	$(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o.provides.build
+.PHONY : util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o.provides
+
+util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o.provides.build: util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o
+
+
 util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o: util/src/CMakeFiles/vinceutil.dir/flags.make
 util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o: ../util/src/Vin_Task.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o"
 	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vinceutil.dir/Vin_Task.cpp.o -c /home/cyz/CLionProjects/clog/util/src/Vin_Task.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.i: cmake_force
@@ -155,7 +179,7 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o.provides.build: util/src/CMakeF
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: util/src/CMakeFiles/vinceutil.dir/flags.make
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/src/Vin_Thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o"
 	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o -c /home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.i: cmake_force
@@ -175,30 +199,6 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o.provides: util/src/CMakeFiles
 .PHONY : util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o.provides
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o.provides.build: util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o
-
-
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: util/src/CMakeFiles/vinceutil.dir/flags.make
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o: ../util/src/Vin_ThreadPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cyz/CLionProjects/clog/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o"
-	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o -c /home/cyz/CLionProjects/clog/util/src/Vin_ThreadPool.cpp
-
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.i"
-	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cyz/CLionProjects/clog/util/src/Vin_ThreadPool.cpp > CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.i
-
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.s"
-	cd /home/cyz/CLionProjects/clog/cmake-build-debug/util/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cyz/CLionProjects/clog/util/src/Vin_ThreadPool.cpp -o CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.s
-
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o.requires:
-
-.PHONY : util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o.requires
-
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o.provides: util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o.requires
-	$(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o.provides.build
-.PHONY : util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o.provides
-
-util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o.provides.build: util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o
 
 
 util/src/CMakeFiles/vinceutil.dir/log.cpp.o: util/src/CMakeFiles/vinceutil.dir/flags.make
@@ -252,11 +252,11 @@ util/src/CMakeFiles/vinceutil.dir/tools.cpp.o.provides.build: util/src/CMakeFile
 # Object files for target vinceutil
 vinceutil_OBJECTS = \
 "CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o" \
-"CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o" \
+"CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o" \
 "CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o" \
+"CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o" \
 "CMakeFiles/vinceutil.dir/Vin_Task.cpp.o" \
 "CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o" \
-"CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o" \
 "CMakeFiles/vinceutil.dir/log.cpp.o" \
 "CMakeFiles/vinceutil.dir/tools.cpp.o"
 
@@ -264,11 +264,11 @@ vinceutil_OBJECTS = \
 vinceutil_EXTERNAL_OBJECTS =
 
 ../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o
-../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o
+../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o
 ../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o
+../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o
 ../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o
 ../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o
-../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o
 ../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/log.cpp.o
 ../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/tools.cpp.o
 ../lib/libvinceutil.a: util/src/CMakeFiles/vinceutil.dir/build.make
@@ -283,11 +283,11 @@ util/src/CMakeFiles/vinceutil.dir/build: ../lib/libvinceutil.a
 .PHONY : util/src/CMakeFiles/vinceutil.dir/build
 
 util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o.requires
-util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o.requires
+util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o.requires
 util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o.requires
+util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o.requires
 util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o.requires
 util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o.requires
-util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o.requires
 util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/log.cpp.o.requires
 util/src/CMakeFiles/vinceutil.dir/requires: util/src/CMakeFiles/vinceutil.dir/tools.cpp.o.requires
 

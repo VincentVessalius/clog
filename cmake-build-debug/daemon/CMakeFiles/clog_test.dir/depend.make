@@ -18,6 +18,7 @@ daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_B
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Codec.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Comparers.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Exception.h
+daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_MemoryPool.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Singleton.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Task.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_TaskPriorityQueue.h

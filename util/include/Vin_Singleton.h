@@ -17,7 +17,7 @@ namespace vince {
         friend class Vin_Singleton<T, Vin_Starver>;
 
     private:
-        static T *get();
+        static T *_get();
 
     private:
         Vin_Starver() = delete;
@@ -39,7 +39,7 @@ namespace vince {
     template<typename T> std::mutex Vin_Starver<T>::_lock;
 
     template<typename T>
-    T *Vin_Starver<T>::get() {
+    T *Vin_Starver<T>::_get() {
         if (_item != nullptr)
             return _item;
         else {
@@ -55,7 +55,7 @@ namespace vince {
         friend class Vin_Singleton<T, Vin_Lazer>;
 
     private:
-        static T *get();
+        static T *_get();
 
     private:
         Vin_Lazer() = delete;
@@ -73,7 +73,7 @@ namespace vince {
     template<typename T> T Vin_Lazer<T>::_item;
 
     template<typename T>
-    T *Vin_Lazer<T>::get() {
+    T *Vin_Lazer<T>::_get() {
         return &_item;
     }
 

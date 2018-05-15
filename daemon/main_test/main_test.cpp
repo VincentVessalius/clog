@@ -13,11 +13,34 @@
 #include "util/include/Vin_Singleton.h"
 #include "util/include/Vin_Codec.h"
 #include "util/include/Vin_Base64.h"
+#include "util/include/Vin_MemoryPool.h"
 
 using namespace std;
 using namespace vince;
 
 int main() {
+
+    /***********************************************************************
+     * cyz-> Test for Vin_MemoryPool(ThreadSafely)
+     *
+    Vin_MemoryPool mpool(32,1024);
+    Vin_ThreadPool<> tpool;
+    tpool.init(2);
+    function<void(void)> exec_fn[3] = {
+        [&mpool]() -> void { mpool.Allocate(32);},
+        [&mpool]() -> void { mpool.Allocate(31);},
+        [&mpool]() -> void { mpool.Allocate(64);}
+    };
+
+    tpool.exec(make_shared<Vin_Task>(exec_fn[0]));
+    tpool.exec(make_shared<Vin_Task>(exec_fn[2]));
+
+    tpool.start();
+
+    tpool.waitForAllDone(-1);
+
+    cout<<mpool.DebugPrint();*/
+
 
     /***********************************************************************
      * cyz-> Test for Vin_Singleton and Vin_Base64
@@ -72,7 +95,7 @@ int main() {
 
     /***********************************************************************
      * cyz-> Test for Vin_ThreadPool and Vin_Task
-     **/
+     *
     Vin_ThreadPool<> testPool;
     testPool.init(1);
 
@@ -108,7 +131,7 @@ int main() {
     bool b = testPool.waitForAllDone(-1);
     cout << "waitForAllDone..." << b << ":" << testPool.getJobNum() << endl;
 
-    testPool.stop();/**/
+    testPool.stop();*/
 
     /***********************************************************************
      * cyz-> Test for Vin_Thread

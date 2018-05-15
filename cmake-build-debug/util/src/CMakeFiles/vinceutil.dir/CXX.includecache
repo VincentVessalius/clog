@@ -10,15 +10,9 @@
 Vin_Codec.h
 ../util/include/Vin_Codec.h
 
-..//util/include/Vin_Codec.h
-string
+..//util/include/Vin_Buffer.h
+cstring
 -
-iostream
--
-Vin_Singleton.h
-../util/include/Vin_Singleton.h
-Vin_Exception.h
-../util/include/Vin_Exception.h
 
 ..//util/include/Vin_Exception.h
 stdexcept
@@ -26,6 +20,16 @@ stdexcept
 cstring
 -
 cerrno
+-
+
+..//util/include/Vin_MemoryPool.h
+cstddef
+-
+vector
+-
+list
+-
+mutex
 -
 
 ..//util/include/Vin_Task.h
@@ -45,18 +49,6 @@ condition_variable
 -
 Vin_Exception.h
 ../util/include/Vin_Exception.h
-
-..//util/include/Vin_ThreadPool.h
-vector
--
-set
--
-Vin_Thread.h
-../util/include/Vin_Thread.h
-Vin_TaskQueue.h
-../util/include/Vin_TaskQueue.h
-Vin_Task.h
-../util/include/Vin_Task.h
 
 ..//util/include/log.h
 string
@@ -110,42 +102,6 @@ cerrno
 mutex
 -
 
-../util/include/Vin_Task.h
-functional
--
-
-../util/include/Vin_TaskQueue.h
-deque
--
-cstddef
--
-mutex
--
-condition_variable
--
-assert.h
--
-thread
--
-mutex
--
-condition_variable
--
-
-../util/include/Vin_Thread.h
-pthread.h
--
-memory
--
-thread
--
-mutex
--
-condition_variable
--
-Vin_Exception.h
-../util/include/Vin_Exception.h
-
 ../util/include/tools.h
 string
 -
@@ -162,15 +118,27 @@ dirent.h
 util/include/Vin_Base64.h
 /home/cyz/CLionProjects/clog/util/src/util/include/Vin_Base64.h
 
-/home/cyz/CLionProjects/clog/util/src/Vin_Codec.cpp
-util/include/Vin_Codec.h
-/home/cyz/CLionProjects/clog/util/src/util/include/Vin_Codec.h
+/home/cyz/CLionProjects/clog/util/src/Vin_Buffer.cpp
+util/include/Vin_Buffer.h
+/home/cyz/CLionProjects/clog/util/src/util/include/Vin_Buffer.h
 
 /home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp
 util/include/Vin_Exception.h
 /home/cyz/CLionProjects/clog/util/src/util/include/Vin_Exception.h
 execinfo.h
 -
+
+/home/cyz/CLionProjects/clog/util/src/Vin_MemoryPool.cpp
+iomanip
+-
+sstream
+-
+zconf.h
+-
+iostream
+-
+util/include/Vin_MemoryPool.h
+/home/cyz/CLionProjects/clog/util/src/util/include/Vin_MemoryPool.h
 
 /home/cyz/CLionProjects/clog/util/src/Vin_Task.cpp
 iostream
@@ -185,10 +153,6 @@ thread
 -
 util/include/Vin_Thread.h
 /home/cyz/CLionProjects/clog/util/src/util/include/Vin_Thread.h
-
-/home/cyz/CLionProjects/clog/util/src/Vin_ThreadPool.cpp
-util/include/Vin_ThreadPool.h
-/home/cyz/CLionProjects/clog/util/src/util/include/Vin_ThreadPool.h
 
 /home/cyz/CLionProjects/clog/util/src/log.cpp
 util/include/log.h
