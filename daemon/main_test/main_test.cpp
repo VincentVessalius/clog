@@ -1,22 +1,12 @@
 #include <iostream>
 #include <queue>
 #include <memory>
-#include <util/include/Vin_TaskPriorityQueue.h>
 #include <bits/shared_ptr.h>
-#include "util/include/Vin_Task.h"
-#include "util/include/log.h"
-#include "daemon/Server.h"
-#include "daemon/testThread.h"
-#include "util/include/Vin_Exception.h"
-#include "util/include/Vin_Comparers.h"
-#include "util/include/Vin_ThreadPool.h"
-#include "util/include/Vin_Singleton.h"
-#include "util/include/Vin_Codec.h"
-#include "util/include/Vin_Base64.h"
-#include "util/include/Vin_MemoryPool.h"
+#include "util/include/Vin_Socket.h"
 
-using namespace std;
-using namespace vince;
+
+//using namespace std;
+//using namespace vince;
 
 int main() {
 

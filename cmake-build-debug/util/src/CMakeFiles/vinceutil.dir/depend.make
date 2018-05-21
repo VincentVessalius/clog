@@ -10,11 +10,29 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o: ../util/src/Vin_Base64.cpp
 util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: ../util/include/Vin_Buffer.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: ../util/src/Vin_Buffer.cpp
 
+util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/include/Vin_ClientSocket.h
+util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/include/Vin_Endpoint.h
+util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/include/Vin_Epoller.h
+util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/include/Vin_Exception.h
+util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/include/Vin_Socket.h
+util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/src/Vin_ClientSocket.cpp
+
+util/src/CMakeFiles/vinceutil.dir/Vin_Endpoint.cpp.o: ../util/include/Vin_Endpoint.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Endpoint.cpp.o: ../util/include/Vin_Exception.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Endpoint.cpp.o: ../util/src/Vin_Endpoint.cpp
+
+util/src/CMakeFiles/vinceutil.dir/Vin_Epoller.cpp.o: ../util/include/Vin_Epoller.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Epoller.cpp.o: ../util/src/Vin_Epoller.cpp
+
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/src/Vin_Exception.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o: ../util/include/Vin_MemoryPool.h
 util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o: ../util/src/Vin_MemoryPool.cpp
+
+util/src/CMakeFiles/vinceutil.dir/Vin_Socket.cpp.o: ../util/include/Vin_Socket.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Socket.cpp.o: ../util/include/Vin_Exception.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Socket.cpp.o: ../util/src/Vin_Socket.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o: ../util/include/Vin_Task.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o: ../util/src/Vin_Task.cpp

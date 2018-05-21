@@ -12,27 +12,8 @@ daemon/CMakeFiles/clog_test.dir/Server.cpp.o: ../daemon/Servant.h
 daemon/CMakeFiles/clog_test.dir/Server.cpp.o: ../daemon/Server.cpp
 daemon/CMakeFiles/clog_test.dir/Server.cpp.o: ../daemon/Server.h
 
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../daemon/Server.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../daemon/testThread.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Base64.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Codec.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Comparers.h
+daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Socket.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Exception.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_MemoryPool.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Singleton.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Task.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_TaskPriorityQueue.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Thread.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_ThreadPool.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/log.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Codec.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Comparers.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Exception.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Singleton.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Task.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_TaskQueue.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Thread.h
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/tools.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../daemon/main_test/main_test.cpp
 
 daemon/CMakeFiles/clog_test.dir/testThread.cpp.o: ../util/include/Vin_Thread.h
