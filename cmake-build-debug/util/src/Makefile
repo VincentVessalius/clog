@@ -179,6 +179,33 @@ Vin_Buffer.cpp.s:
 	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.s
 .PHONY : Vin_Buffer.cpp.s
 
+Vin_Cgi.o: Vin_Cgi.cpp.o
+
+.PHONY : Vin_Cgi.o
+
+# target to build an object file
+Vin_Cgi.cpp.o:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o
+.PHONY : Vin_Cgi.cpp.o
+
+Vin_Cgi.i: Vin_Cgi.cpp.i
+
+.PHONY : Vin_Cgi.i
+
+# target to preprocess a source file
+Vin_Cgi.cpp.i:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.i
+.PHONY : Vin_Cgi.cpp.i
+
+Vin_Cgi.s: Vin_Cgi.cpp.s
+
+.PHONY : Vin_Cgi.s
+
+# target to generate assembly for a file
+Vin_Cgi.cpp.s:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.s
+.PHONY : Vin_Cgi.cpp.s
+
 Vin_ClientSocket.o: Vin_ClientSocket.cpp.o
 
 .PHONY : Vin_ClientSocket.o
@@ -232,6 +259,33 @@ Vin_Endpoint.s: Vin_Endpoint.cpp.s
 Vin_Endpoint.cpp.s:
 	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Endpoint.cpp.s
 .PHONY : Vin_Endpoint.cpp.s
+
+Vin_EpollServer.o: Vin_EpollServer.cpp.o
+
+.PHONY : Vin_EpollServer.o
+
+# target to build an object file
+Vin_EpollServer.cpp.o:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_EpollServer.cpp.o
+.PHONY : Vin_EpollServer.cpp.o
+
+Vin_EpollServer.i: Vin_EpollServer.cpp.i
+
+.PHONY : Vin_EpollServer.i
+
+# target to preprocess a source file
+Vin_EpollServer.cpp.i:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_EpollServer.cpp.i
+.PHONY : Vin_EpollServer.cpp.i
+
+Vin_EpollServer.s: Vin_EpollServer.cpp.s
+
+.PHONY : Vin_EpollServer.s
+
+# target to generate assembly for a file
+Vin_EpollServer.cpp.s:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_EpollServer.cpp.s
+.PHONY : Vin_EpollServer.cpp.s
 
 Vin_Epoller.o: Vin_Epoller.cpp.o
 
@@ -395,6 +449,33 @@ Vin_Thread.cpp.s:
 	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.s
 .PHONY : Vin_Thread.cpp.s
 
+Vin_Tools.o: Vin_Tools.cpp.o
+
+.PHONY : Vin_Tools.o
+
+# target to build an object file
+Vin_Tools.cpp.o:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Tools.cpp.o
+.PHONY : Vin_Tools.cpp.o
+
+Vin_Tools.i: Vin_Tools.cpp.i
+
+.PHONY : Vin_Tools.i
+
+# target to preprocess a source file
+Vin_Tools.cpp.i:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Tools.cpp.i
+.PHONY : Vin_Tools.cpp.i
+
+Vin_Tools.s: Vin_Tools.cpp.s
+
+.PHONY : Vin_Tools.s
+
+# target to generate assembly for a file
+Vin_Tools.cpp.s:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Tools.cpp.s
+.PHONY : Vin_Tools.cpp.s
+
 log.o: log.cpp.o
 
 .PHONY : log.o
@@ -422,33 +503,6 @@ log.cpp.s:
 	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/log.cpp.s
 .PHONY : log.cpp.s
 
-tools.o: tools.cpp.o
-
-.PHONY : tools.o
-
-# target to build an object file
-tools.cpp.o:
-	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/tools.cpp.o
-.PHONY : tools.cpp.o
-
-tools.i: tools.cpp.i
-
-.PHONY : tools.i
-
-# target to preprocess a source file
-tools.cpp.i:
-	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/tools.cpp.i
-.PHONY : tools.cpp.i
-
-tools.s: tools.cpp.s
-
-.PHONY : tools.s
-
-# target to generate assembly for a file
-tools.cpp.s:
-	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/tools.cpp.s
-.PHONY : tools.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -464,12 +518,18 @@ help:
 	@echo "... Vin_Buffer.o"
 	@echo "... Vin_Buffer.i"
 	@echo "... Vin_Buffer.s"
+	@echo "... Vin_Cgi.o"
+	@echo "... Vin_Cgi.i"
+	@echo "... Vin_Cgi.s"
 	@echo "... Vin_ClientSocket.o"
 	@echo "... Vin_ClientSocket.i"
 	@echo "... Vin_ClientSocket.s"
 	@echo "... Vin_Endpoint.o"
 	@echo "... Vin_Endpoint.i"
 	@echo "... Vin_Endpoint.s"
+	@echo "... Vin_EpollServer.o"
+	@echo "... Vin_EpollServer.i"
+	@echo "... Vin_EpollServer.s"
 	@echo "... Vin_Epoller.o"
 	@echo "... Vin_Epoller.i"
 	@echo "... Vin_Epoller.s"
@@ -488,12 +548,12 @@ help:
 	@echo "... Vin_Thread.o"
 	@echo "... Vin_Thread.i"
 	@echo "... Vin_Thread.s"
+	@echo "... Vin_Tools.o"
+	@echo "... Vin_Tools.i"
+	@echo "... Vin_Tools.s"
 	@echo "... log.o"
 	@echo "... log.i"
 	@echo "... log.s"
-	@echo "... tools.o"
-	@echo "... tools.i"
-	@echo "... tools.s"
 .PHONY : help
 
 

@@ -14,7 +14,7 @@ time_t curtime;
 
 int InitLog(std::string tmpDir) {
     logDir = tmpDir + "/log";
-    if (mkdirs(logDir, DIRMODE))
+    if (vince::Vin_Tools::mkdirs(logDir, DIRMODE))
         return -1;
     if (!(logErrF = fopen((logDir + "/ERROR").c_str(), "a+")))
         return -1;

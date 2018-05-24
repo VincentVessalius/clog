@@ -3,12 +3,12 @@
 
 daemon/CMakeFiles/clog_test.dir/Servant.cpp.o
  ..//util/include/log.h
- ../util/include/tools.h
+ ../util/include/Vin_Tools.h
  /home/cyz/CLionProjects/clog/daemon/Servant.cpp
  /home/cyz/CLionProjects/clog/daemon/Servant.h
 daemon/CMakeFiles/clog_test.dir/Server.cpp.o
  ..//util/include/log.h
- ../util/include/tools.h
+ ../util/include/Vin_Tools.h
  /home/cyz/CLionProjects/clog/daemon/Servant.h
  /home/cyz/CLionProjects/clog/daemon/Server.cpp
  /home/cyz/CLionProjects/clog/daemon/Server.h

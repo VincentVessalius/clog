@@ -10,6 +10,11 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Base64.cpp.o: ../util/src/Vin_Base64.cpp
 util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: ../util/include/Vin_Buffer.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: ../util/src/Vin_Buffer.cpp
 
+util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/include/Vin_Cgi.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/include/Vin_Tools.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/include/Vin_Exception.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/src/Vin_Cgi.cpp
+
 util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/include/Vin_ClientSocket.h
 util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/include/Vin_Endpoint.h
 util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/include/Vin_Epoller.h
@@ -20,6 +25,9 @@ util/src/CMakeFiles/vinceutil.dir/Vin_ClientSocket.cpp.o: ../util/src/Vin_Client
 util/src/CMakeFiles/vinceutil.dir/Vin_Endpoint.cpp.o: ../util/include/Vin_Endpoint.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Endpoint.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Endpoint.cpp.o: ../util/src/Vin_Endpoint.cpp
+
+util/src/CMakeFiles/vinceutil.dir/Vin_EpollServer.cpp.o: ../util/include/Vin_EpollServer.h
+util/src/CMakeFiles/vinceutil.dir/Vin_EpollServer.cpp.o: ../util/src/Vin_EpollServer.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Epoller.cpp.o: ../util/include/Vin_Epoller.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Epoller.cpp.o: ../util/src/Vin_Epoller.cpp
@@ -41,10 +49,10 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/include/Vin_Thread.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Thread.cpp.o: ../util/src/Vin_Thread.cpp
 
-util/src/CMakeFiles/vinceutil.dir/log.cpp.o: ../util/include/log.h
-util/src/CMakeFiles/vinceutil.dir/log.cpp.o: ../util/include/tools.h
-util/src/CMakeFiles/vinceutil.dir/log.cpp.o: ../util/src/log.cpp
+util/src/CMakeFiles/vinceutil.dir/Vin_Tools.cpp.o: ../util/include/Vin_Tools.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Tools.cpp.o: ../util/src/Vin_Tools.cpp
 
-util/src/CMakeFiles/vinceutil.dir/tools.cpp.o: ../util/include/tools.h
-util/src/CMakeFiles/vinceutil.dir/tools.cpp.o: ../util/src/tools.cpp
+util/src/CMakeFiles/vinceutil.dir/log.cpp.o: ../util/include/log.h
+util/src/CMakeFiles/vinceutil.dir/log.cpp.o: ../util/include/Vin_Tools.h
+util/src/CMakeFiles/vinceutil.dir/log.cpp.o: ../util/src/log.cpp
 

@@ -45,8 +45,8 @@ fcntl.h
 -
 unistd.h
 -
-tools.h
-../util/include/tools.h
+Vin_Tools.h
+../util/include/Vin_Tools.h
 
 ../util/include/Vin_Exception.h
 stdexcept
@@ -56,7 +56,7 @@ cstring
 cerrno
 -
 
-../util/include/tools.h
+../util/include/Vin_Tools.h
 string
 -
 fstream

@@ -155,28 +155,22 @@
 		<Unit filename="/home/cyz/CLionProjects/clog/daemon/testThread.h">
 			<Option target="clog_test"/>
 		</Unit>
-		<Unit filename="/home/cyz/CLionProjects/clog/util/include/Vin_ClientSocket.h">
-			<Option target="vinceutil"/>
-		</Unit>
-		<Unit filename="/home/cyz/CLionProjects/clog/util/include/Vin_Endpoint.h">
-			<Option target="vinceutil"/>
-		</Unit>
-		<Unit filename="/home/cyz/CLionProjects/clog/util/include/Vin_Epoller.h">
-			<Option target="vinceutil"/>
-		</Unit>
-		<Unit filename="/home/cyz/CLionProjects/clog/util/include/Vin_Socket.h">
-			<Option target="vinceutil"/>
-		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Base64.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Buffer.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
+		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Cgi.cpp">
+			<Option target="vinceutil"/>
+		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_ClientSocket.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Endpoint.cpp">
+			<Option target="vinceutil"/>
+		</Unit>
+		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_EpollServer.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Epoller.cpp">
@@ -197,10 +191,10 @@
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Thread.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
-		<Unit filename="/home/cyz/CLionProjects/clog/util/src/log.cpp">
+		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Tools.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
-		<Unit filename="/home/cyz/CLionProjects/clog/util/src/tools.cpp">
+		<Unit filename="/home/cyz/CLionProjects/clog/util/src/log.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/CMakeLists.txt">
