@@ -12,8 +12,8 @@ daemon/CMakeFiles/clog_test.dir/Server.cpp.o: ../daemon/Servant.h
 daemon/CMakeFiles/clog_test.dir/Server.cpp.o: ../daemon/Server.cpp
 daemon/CMakeFiles/clog_test.dir/Server.cpp.o: ../daemon/Server.h
 
-daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Socket.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Exception.h
+daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../util/include/Vin_Http.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o: ../daemon/main_test/main_test.cpp
 
 daemon/CMakeFiles/clog_test.dir/testThread.cpp.o: ../util/include/Vin_Thread.h

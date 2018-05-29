@@ -13,25 +13,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40cc014d-0922-43e0-b399-42db21e355a3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/util/include/Vin_EpollServer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/src/Vin_EpollServer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/include/Vin_Http.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/include/Vin_Http.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/clog_test" beforeDir="false" afterPath="$PROJECT_DIR$/bin/clog_test" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/clog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/clog.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/clog.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/clog_test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/daemon/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/daemon/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Codec.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_ThreadPool.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/util/src/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/tools.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/daemon/main_test/main_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/daemon/main_test/main_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/libvinceutil.a" beforeDir="false" afterPath="$PROJECT_DIR$/lib/libvinceutil.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/include/Vin_Cgi.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/include/Vin_Cgi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/src/Vin_Cgi.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/Vin_Cgi.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -50,7 +47,7 @@
       <file leaf-file-name="Vin_ClientSocket.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/include/Vin_ClientSocket.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
+            <state relative-caret-position="3200">
               <caret line="160" column="11" selection-start-line="160" selection-start-column="11" selection-end-line="160" selection-end-column="11" />
               <folding>
                 <element signature="e#102#140#0" expanded="true" />
@@ -59,91 +56,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vin_EpollServer.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/src/Vin_EpollServer.cpp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/src/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vin_EpollServer.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vin_EpollServer.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/include/Vin_EpollServer.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/include/CMakeLists.txt">
+      <file leaf-file-name="Vin_Cgi.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/include/Vin_Cgi.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vin_ClientSocket.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/src/Vin_ClientSocket.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="437" column="25" selection-start-line="437" selection-start-column="25" selection-end-line="437" selection-end-column="25" />
+            <state relative-caret-position="1162">
+              <caret line="270" column="42" selection-start-line="270" selection-start-column="42" selection-end-line="270" selection-end-column="42" />
               <folding>
-                <element signature="e#37#79#0" expanded="true" />
+                <element signature="e#84#110#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vin_Socket.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/include/Vin_Socket.h">
+      <file leaf-file-name="Vin_Cgi.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/src/Vin_Cgi.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+            <state relative-caret-position="216">
+              <caret line="55" column="18" selection-start-line="55" selection-end-line="56" selection-end-column="33" />
               <folding>
-                <element signature="e#90#113#0" expanded="true" />
+                <element signature="e#37#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vin_Socket.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/src/Vin_Socket.cpp">
+      <file leaf-file-name="Vin_Http.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/include/Vin_Http.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="310" column="5" selection-start-line="310" selection-start-column="5" selection-end-line="310" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vin_Epoller.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/include/Vin_Epoller.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1240">
-              <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+            <state relative-caret-position="158">
+              <caret line="577" column="31" lean-forward="true" selection-start-line="577" selection-start-column="31" selection-end-line="577" selection-end-column="31" />
               <folding>
-                <element signature="e#92#114#0" expanded="true" />
+                <element signature="e#86#103#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vin_Epoller.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/src/Vin_Epoller.cpp">
+      <file leaf-file-name="Vin_Http.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/util/include/Vin_Http.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+            <state relative-caret-position="318">
+              <caret line="692" column="5" lean-forward="true" selection-start-line="692" selection-start-column="5" selection-end-line="692" selection-end-column="5" />
               <folding>
-                <element signature="e#37#55#0" expanded="true" />
+                <element signature="e#37#53#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="time.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/time.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -159,8 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Task</find>
-      <find>Vin_ThreadPool</find>
       <find>&lt;Q&gt;</find>
       <find>Vin_TaskQueue</find>
       <find>Q</find>
@@ -189,6 +161,8 @@
       <find>_bOwner</find>
       <find>epoller</find>
       <find>INVALID_SOCKET</find>
+      <find>_sUploadFilePrefix</find>
+      <find>setCookie</find>
     </findStrings>
     <replaceStrings>
       <replace>s</replace>
@@ -201,6 +175,7 @@
       <replace>template&lt;typename&gt; class Q</replace>
       <replace>_get</replace>
       <replace>_weightType</replace>
+      <replace>Vin_Cgi</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -209,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/util/init.h" />
         <option value="$PROJECT_DIR$/daemon/main.cpp" />
         <option value="$PROJECT_DIR$/util/tools.cpp" />
         <option value="$PROJECT_DIR$/util/tools.h" />
@@ -244,7 +218,6 @@
         <option value="$PROJECT_DIR$/util/include/Vin_ThreadPool.h" />
         <option value="$PROJECT_DIR$/util/src/Vin_MemoryPool.cpp" />
         <option value="$PROJECT_DIR$/util/src/Vin_Endpoint.cpp" />
-        <option value="$PROJECT_DIR$/daemon/main_test/main_test.cpp" />
         <option value="$PROJECT_DIR$/util/include/Vin_Endpoint.h" />
         <option value="$PROJECT_DIR$/util/src/Vin_Socket.cpp" />
         <option value="$PROJECT_DIR$/util/include/Vin_Socket.h" />
@@ -253,6 +226,15 @@
         <option value="$PROJECT_DIR$/util/include/Vin_ClientSocket.h" />
         <option value="$PROJECT_DIR$/util/src/Vin_ClientSocket.cpp" />
         <option value="$PROJECT_DIR$/util/src/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/util/include/tools.h" />
+        <option value="$PROJECT_DIR$/util/include/Vin_Tools.h" />
+        <option value="$PROJECT_DIR$/util/src/Vin_Tools.cpp" />
+        <option value="$PROJECT_DIR$/util/src/log.cpp" />
+        <option value="$PROJECT_DIR$/util/include/Vin_Cgi.h" />
+        <option value="$PROJECT_DIR$/util/src/Vin_Cgi.cpp" />
+        <option value="$PROJECT_DIR$/daemon/main_test/main_test.cpp" />
+        <option value="$PROJECT_DIR$/util/include/Vin_Http.h" />
+        <option value="$PROJECT_DIR$/util/include/Vin_Http.cpp" />
       </list>
     </option>
   </component>
@@ -266,11 +248,10 @@
     <packageJsonPaths />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="400" />
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="28" />
-    <option name="width" value="940" />
-    <option name="height" value="713" />
+    <option name="width" value="960" />
+    <option name="height" value="1018" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -288,7 +269,13 @@
             <path>
               <item name="clog" type="b2602c69:ProjectViewProjectNode" />
               <item name="clog" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="daemon" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clog" type="462c0819:PsiDirectoryNode" />
+              <item name="daemon" type="462c0819:PsiDirectoryNode" />
+              <item name="main_test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clog" type="b2602c69:ProjectViewProjectNode" />
@@ -320,18 +307,19 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/util/include" />
-      <recent name="$PROJECT_DIR$/.." />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/util/src" />
       <recent name="$PROJECT_DIR$/daemon/main_test" />
       <recent name="$PROJECT_DIR$/daemon/main" />
       <recent name="$PROJECT_DIR$/util/include" />
       <recent name="$PROJECT_DIR$/server" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/util/include" />
+      <recent name="$PROJECT_DIR$/.." />
     </key>
   </component>
   <component name="RunDashboard">
@@ -370,6 +358,7 @@
       <workItem from="1525657136158" duration="82699000" />
       <workItem from="1526262008935" duration="66385000" />
       <workItem from="1526625912937" duration="10559000" />
+      <workItem from="1526978359402" duration="53149000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1525768628181</created>
@@ -382,7 +371,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194677000" />
+    <option name="totallyTimeSpent" value="247826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,17 +383,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="28" width="1920" height="1018" extended-state="6" />
+    <frame x="0" y="28" width="1920" height="1018" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15453586" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15453586" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49683544" weight="0.5292096" />
-      <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.4978903" visible="true" weight="0.5452463" />
+      <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.4978903" weight="0.5450399" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.503692" side_tool="true" weight="0.43528065" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3298969" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49630803" weight="0.36540663" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49630803" visible="true" weight="0.36540663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49630803" weight="0.43528065" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49630803" weight="0.2050401" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4882943" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -458,92 +448,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/util/include/Vin_Socket.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding>
-            <element signature="e#90#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/src/Vin_Socket.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5740">
-          <caret line="287" column="49" lean-forward="true" selection-start-line="287" selection-start-column="49" selection-end-line="287" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/include/Vin_Epoller.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1480">
-          <caret line="74" column="22" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-          <folding>
-            <element signature="e#92#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/src/Vin_Epoller.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
-          <folding>
-            <element signature="e#37#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daemon/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-end-line="7" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.8.2/bits/stl_queue.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2379">
-          <caret line="367" column="5" lean-forward="true" selection-start-line="367" selection-start-column="5" selection-end-line="367" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.8.2/chrono">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="528" column="40" selection-start-line="528" selection-start-column="40" selection-end-line="528" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.8.2/condition_variable">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.8.2/queue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.8.2/bits/shared_ptr_base.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.8.2/bits/shared_ptr.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/4.8.2/bits/stl_function.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -660,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/include/Vin_Base64.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/include/Vin_Thread.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-760">
@@ -712,16 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemon/main_test/main_test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -759,7 +646,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util/src/Vin_Epoller.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
+        <state relative-caret-position="1200">
           <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
           <folding>
             <element signature="e#37#55#0" expanded="true" />
@@ -769,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util/include/Vin_Epoller.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1240">
+        <state relative-caret-position="1480">
           <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
           <folding>
             <element signature="e#92#114#0" expanded="true" />
@@ -779,14 +666,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util/src/Vin_Socket.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="6200">
           <caret line="310" column="5" selection-start-line="310" selection-start-column="5" selection-end-line="310" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/util/include/Vin_Socket.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
+        <state relative-caret-position="660">
           <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
           <folding>
             <element signature="e#90#113#0" expanded="true" />
@@ -794,19 +681,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/src/Vin_ClientSocket.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="437" column="25" selection-start-line="437" selection-start-column="25" selection-end-line="437" selection-end-column="25" />
-          <folding>
-            <element signature="e#37#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/include/Vin_ClientSocket.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="3200">
           <caret line="160" column="11" selection-start-line="160" selection-start-column="11" selection-end-line="160" selection-end-column="11" />
           <folding>
             <element signature="e#102#140#0" expanded="true" />
@@ -814,13 +691,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/src/Vin_EpollServer.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/include/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/include/Vin_EpollServer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -831,10 +712,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/include/Vin_EpollServer.h">
+    <entry file="file://$PROJECT_DIR$/util/src/Vin_ClientSocket.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="1046">
+          <caret line="437" column="25" selection-start-line="437" selection-start-column="25" selection-end-line="437" selection-end-column="25" />
+          <folding>
+            <element signature="e#37#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/include/Vin_Base64.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/Vin_Tools.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
+          <folding>
+            <element signature="e#36#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/include/Vin_Tools.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/stdlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="182" column="16" selection-start-line="182" selection-start-column="16" selection-end-line="182" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/4.8.2/bits/basic_string.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="284" column="32" selection-start-line="284" selection-start-column="32" selection-end-line="284" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/include/log.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding>
+            <element signature="e#75#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/log.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/include/Vin_Cgi.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1162">
+          <caret line="270" column="42" selection-start-line="270" selection-start-column="42" selection-end-line="270" selection-end-column="42" />
+          <folding>
+            <element signature="e#84#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daemon/main_test/main_test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/Vin_Cgi.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="55" column="18" selection-start-line="55" selection-end-line="56" selection-end-column="33" />
+          <folding>
+            <element signature="e#37#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/4.8.2/bits/stl_algo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="4914" column="4" selection-start-line="4914" selection-start-column="4" selection-end-line="4914" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/time.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/include/Vin_Http.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="577" column="31" lean-forward="true" selection-start-line="577" selection-start-column="31" selection-end-line="577" selection-end-column="31" />
+          <folding>
+            <element signature="e#86#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/include/Vin_Http.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="692" column="5" lean-forward="true" selection-start-line="692" selection-start-column="5" selection-end-line="692" selection-end-column="5" />
+          <folding>
+            <element signature="e#37#53#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

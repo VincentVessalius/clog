@@ -2,13 +2,70 @@
 #include <queue>
 #include <memory>
 #include <bits/shared_ptr.h>
-#include "util/include/Vin_Socket.h"
+#include "util/include/Vin_Http.h"
 
 
-//using namespace std;
+using namespace std;
 //using namespace vince;
+static int i=0;
+string _simplePath(const string &sPath) {
+    string sNewPath;
+    deque<string> stPath;
+    string::size_type lastPos=0,nowPos=0;
+
+    while(lastPos<sPath.length()){
+        string slot;
+        if((nowPos=sPath.find('/',lastPos))==string::npos){
+            slot=sPath.substr(lastPos);
+
+            if(slot==".."){
+                if(stPath.empty())
+                    return "Wrong Path";
+                stPath.pop_back();
+            }else if(slot=="."){
+                ;
+            }else{
+                stPath.push_back(slot);
+            }
+            break;
+        }
+
+        if(nowPos==0&&lastPos==0){
+            lastPos++;
+            continue;
+        }
+
+        slot=sPath.substr(lastPos,nowPos-lastPos);
+
+        if(slot==".."){
+            if(stPath.empty())
+                return "Wrong Path";
+            stPath.pop_back();
+        }else if(slot=="."){
+            ;
+        }else{
+            stPath.push_back(slot);
+        }
+
+        lastPos=nowPos+1;
+    }
+
+    while(!stPath.empty()){
+        sNewPath+="/"+stPath.front();
+        stPath.pop_front();
+    }
+
+    return sNewPath;
+}
 
 int main() {
+
+    cout<<i++<<": "<<_simplePath("/sd/../ss")<<endl;
+    cout<<i++<<": "<<_simplePath("sd/./ss")<<endl;
+    cout<<i++<<": "<<_simplePath("/sd/../../ss")<<endl;
+    cout<<i++<<": "<<_simplePath("/sd/.././ss/..")<<endl;
+
+
 
     /***********************************************************************
      * cyz-> Test for Vin_MemoryPool(ThreadSafely)

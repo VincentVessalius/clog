@@ -52,6 +52,16 @@ cstring
 cerrno
 -
 
+..//util/include/Vin_Http.h
+string
+-
+map
+-
+list
+-
+util/include/Vin_Exception.h
+../util/include/util/include/Vin_Exception.h
+
 ..//util/include/Vin_MemoryPool.h
 cstddef
 -
@@ -100,6 +110,12 @@ sys/types.h
 sys/stat.h
 -
 dirent.h
+-
+vector
+-
+cstring
+-
+sstream
 -
 
 ..//util/include/log.h
@@ -163,6 +179,12 @@ sys/stat.h
 -
 dirent.h
 -
+vector
+-
+cstring
+-
+sstream
+-
 
 /home/cyz/CLionProjects/clog/util/src/Vin_Base64.cpp
 util/include/Vin_Base64.h
@@ -207,6 +229,20 @@ util/include/Vin_Exception.h
 /home/cyz/CLionProjects/clog/util/src/util/include/Vin_Exception.h
 execinfo.h
 -
+
+/home/cyz/CLionProjects/clog/util/src/Vin_Http.cpp
+deque
+-
+vector
+-
+string
+-
+algorithm
+-
+util/include/Vin_Http.h
+/home/cyz/CLionProjects/clog/util/src/util/include/Vin_Http.h
+util/include/Vin_Tools.h
+/home/cyz/CLionProjects/clog/util/src/util/include/Vin_Tools.h
 
 /home/cyz/CLionProjects/clog/util/src/Vin_MemoryPool.cpp
 iomanip

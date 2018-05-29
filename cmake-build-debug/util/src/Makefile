@@ -341,6 +341,33 @@ Vin_Exception.cpp.s:
 	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.s
 .PHONY : Vin_Exception.cpp.s
 
+Vin_Http.o: Vin_Http.cpp.o
+
+.PHONY : Vin_Http.o
+
+# target to build an object file
+Vin_Http.cpp.o:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o
+.PHONY : Vin_Http.cpp.o
+
+Vin_Http.i: Vin_Http.cpp.i
+
+.PHONY : Vin_Http.i
+
+# target to preprocess a source file
+Vin_Http.cpp.i:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.i
+.PHONY : Vin_Http.cpp.i
+
+Vin_Http.s: Vin_Http.cpp.s
+
+.PHONY : Vin_Http.s
+
+# target to generate assembly for a file
+Vin_Http.cpp.s:
+	cd /home/cyz/CLionProjects/clog/cmake-build-debug && $(MAKE) -f util/src/CMakeFiles/vinceutil.dir/build.make util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.s
+.PHONY : Vin_Http.cpp.s
+
 Vin_MemoryPool.o: Vin_MemoryPool.cpp.o
 
 .PHONY : Vin_MemoryPool.o
@@ -536,6 +563,9 @@ help:
 	@echo "... Vin_Exception.o"
 	@echo "... Vin_Exception.i"
 	@echo "... Vin_Exception.s"
+	@echo "... Vin_Http.o"
+	@echo "... Vin_Http.i"
+	@echo "... Vin_Http.s"
 	@echo "... Vin_MemoryPool.o"
 	@echo "... Vin_MemoryPool.i"
 	@echo "... Vin_MemoryPool.s"

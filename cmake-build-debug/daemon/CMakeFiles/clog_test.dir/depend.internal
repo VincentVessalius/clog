@@ -13,8 +13,8 @@ daemon/CMakeFiles/clog_test.dir/Server.cpp.o
  /home/cyz/CLionProjects/clog/daemon/Server.cpp
  /home/cyz/CLionProjects/clog/daemon/Server.h
 daemon/CMakeFiles/clog_test.dir/main_test/main_test.cpp.o
- ..//util/include/Vin_Socket.h
- ../util/include/Vin_Exception.h
+ ..//util/include/Vin_Exception.h
+ ..//util/include/Vin_Http.h
  /home/cyz/CLionProjects/clog/daemon/main_test/main_test.cpp
 daemon/CMakeFiles/clog_test.dir/testThread.cpp.o
  ..//util/include/Vin_Thread.h

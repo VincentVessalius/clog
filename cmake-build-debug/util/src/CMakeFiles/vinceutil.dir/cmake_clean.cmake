@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/vinceutil.dir/Vin_EpollServer.cpp.o"
   "CMakeFiles/vinceutil.dir/Vin_Epoller.cpp.o"
   "CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o"
+  "CMakeFiles/vinceutil.dir/Vin_Http.cpp.o"
   "CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o"
   "CMakeFiles/vinceutil.dir/Vin_Socket.cpp.o"
   "CMakeFiles/vinceutil.dir/Vin_Task.cpp.o"

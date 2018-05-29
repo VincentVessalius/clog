@@ -35,6 +35,11 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Epoller.cpp.o: ../util/src/Vin_Epoller.cpp
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/src/Vin_Exception.cpp
 
+util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_Exception.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_Http.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_Tools.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/src/Vin_Http.cpp
+
 util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o: ../util/include/Vin_MemoryPool.h
 util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o: ../util/src/Vin_MemoryPool.cpp
 

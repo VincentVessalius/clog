@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/cyz/CLionProjects/clog/util/src/Vin_EpollServer.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_EpollServer.cpp.o"
   "/home/cyz/CLionProjects/clog/util/src/Vin_Epoller.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Epoller.cpp.o"
   "/home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o"
+  "/home/cyz/CLionProjects/clog/util/src/Vin_Http.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o"
   "/home/cyz/CLionProjects/clog/util/src/Vin_MemoryPool.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o"
   "/home/cyz/CLionProjects/clog/util/src/Vin_Socket.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Socket.cpp.o"
   "/home/cyz/CLionProjects/clog/util/src/Vin_Task.cpp" "/home/cyz/CLionProjects/clog/cmake-build-debug/util/src/CMakeFiles/vinceutil.dir/Vin_Task.cpp.o"

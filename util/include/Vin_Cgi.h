@@ -380,7 +380,7 @@ namespace vince {
         * @param sHeader 缺省值为"text/html"
         * @return 
         */
-        static string htmlHeader(const string &sHeader = "text/html");
+        static string retHtmlHeader_(const string &sHeader = "text/html");
 
         /**
         * @brief http请求的url解码, %后面的换成字符. 
@@ -388,7 +388,7 @@ namespace vince {
         * @param sUrl http请求url
         * @return    解码后的字符串
         */
-        static string decodeURL(const string &sUrl);
+        static string decodeURL_(const string &sUrl);
 
         /**
          * @brief 对url进行编码, 非数字和字母用%XX代替. 
@@ -396,7 +396,7 @@ namespace vince {
          * @param sUrl http请求url
          * @return     编码后的url
          */
-        static string encodeURL(const string &sUrl);
+        static string encodeURL_(const string &sUrl);
 
         /**
          * @brief 对源字符串进行HTML编码(<>"&) 
@@ -405,7 +405,7 @@ namespace vince {
          * @param blankEncode 是否对空格也编码(空格, \t, \r\n, \n) 
          * @return            HTML编码后的字符串
          */
-        static string encodeHTML(const string &src, bool blankEncode = false);
+        static string encodeHTML_(const string &src, bool blankEncode = false);
 
         /**
          * @brief 对源字符串进行XML编码(<>"&'). 
@@ -413,7 +413,7 @@ namespace vince {
          * @param src  源字符串
          * @return     XML编码后的字符串
          */
-        static string encodeXML(const string &src);
+        static string encodeXML_(const string &src);
 
     protected:
 

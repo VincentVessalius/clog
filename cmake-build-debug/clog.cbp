@@ -179,6 +179,9 @@
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp">
 			<Option target="vinceutil"/>
 		</Unit>
+		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_Http.cpp">
+			<Option target="vinceutil"/>
+		</Unit>
 		<Unit filename="/home/cyz/CLionProjects/clog/util/src/Vin_MemoryPool.cpp">
 			<Option target="vinceutil"/>
 		</Unit>

@@ -273,11 +273,11 @@ namespace vince {
         _env[sName] = sValue;
     }
 
-    string Vin_Cgi::htmlHeader(const string &sHeader) {
-        return "Content-type: " + sHeader + "\r\n";
+    string Vin_Cgi::retHtmlHeader_(const string &sHeader) {
+        return "Content-type: " + sHeader + "\n\n";
     }
 
-    string Vin_Cgi::decodeURL(const string &sUrl) {
+    string Vin_Cgi::decodeURL_(const string &sUrl) {
         string sDecodeUrl;
         string::size_type pos = 0;
         string::size_type len = sUrl.length();
@@ -300,7 +300,7 @@ namespace vince {
         return sDecodeUrl;
     }
 
-    string Vin_Cgi::encodeURL(const string &sUrl) {
+    string Vin_Cgi::encodeURL_(const string &sUrl) {
         string sEncodeUrl;
         string::size_type pos = 0;
         string::size_type len = sUrl.length();
@@ -324,7 +324,7 @@ namespace vince {
         return sEncodeUrl;
     }
 
-    string Vin_Cgi::encodeHTML(const string &src, bool blankEncode) {
+    string Vin_Cgi::encodeHTML_(const string &src, bool blankEncode) {
         if (src.empty())
             return "";
 
@@ -343,7 +343,7 @@ namespace vince {
         return result;
     }
 
-    string Vin_Cgi::encodeXML(const string &src) {
+    string Vin_Cgi::encodeXML_(const string &src) {
         if (src.empty())
             return "";
 
@@ -427,8 +427,8 @@ namespace vince {
             if (sBuffer[pos] == '=') {
                 if (pos == len - 1)                     //最后一个参数
                 {
-                    sName = decodeURL(Vin_Tools::trim(sName, " "));
-                    sValue = decodeURL(sValue);
+                    sName = decodeURL_(Vin_Tools::trim(sName, " "));
+                    sValue = decodeURL_(sValue);
 
                     mpCookies[sName] = sValue;
 
@@ -441,8 +441,8 @@ namespace vince {
                     if ((pos == len - 1) && (sBuffer[pos] != ';')) {
                         sValue += sBuffer[pos];
                     }
-                    sName = decodeURL(Vin_Tools::trim(sName, " "));
-                    sValue = decodeURL(sValue);
+                    sName = decodeURL_(Vin_Tools::trim(sName, " "));
+                    sValue = decodeURL_(sValue);
 
                     mpCookies[sName] = sValue;
 
@@ -485,7 +485,7 @@ namespace vince {
 
             if (bName)                         //param name
             {
-                sName = Vin_Cgi::decodeURL(sTmp);
+                sName = Vin_Cgi::decodeURL_(sTmp);
 
                 if ((sBuffer[pos] != '=') || (pos == len - 1)) {
                     sValue = "";
@@ -495,7 +495,7 @@ namespace vince {
                     bName = false;
                 }
             } else {
-                sValue = Vin_Cgi::decodeURL(sTmp);
+                sValue = Vin_Cgi::decodeURL_(sTmp);
 
                 mmpParams.insert(multimap<string, string>::value_type(sName, sValue));
 

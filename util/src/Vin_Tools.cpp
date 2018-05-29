@@ -110,4 +110,25 @@ namespace vince{
 
         return trimright(trimleft(sStr,s,bChar),s,bChar);
     }
+
+    int Vin_Tools::str2tm(const string &sString, const string &sFormat, struct tm &stTm) {
+        char *p = strptime(sString.c_str(), sFormat.c_str(), &stTm);
+        return (p != NULL) ? 0 : -1;
+    }
+
+    int Vin_Tools::strgmt2tm(const string &sString, struct tm &stTm) {
+        return str2tm(sString, "%a, %d %b %Y %H:%M:%S GMT", stTm);
+    }
+
+    string Vin_Tools::lower(const string &sStr) {
+        string ret;
+        transform(sStr.begin(),sStr.end(),ret.begin(),::tolower);
+        return ret;
+    }
+
+    string Vin_Tools::upper(const string &sStr) {
+        string ret;
+        transform(sStr.begin(),sStr.end(),ret.begin(),::toupper);
+        return ret;
+    }
 }
