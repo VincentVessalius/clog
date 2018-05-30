@@ -6,6 +6,8 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <assert.h>
+#include <util/include/Vin_ClientSocket.h>
 #include "util/include/Vin_Http.h"
 #include "util/include/Vin_Tools.h"
 
@@ -396,7 +398,7 @@ namespace vince {
         //Set-Cookie和Cookie可以有多个头
         const char *pStr1 = "SET-COOKIE";
         const char *pStr2 = "COOKIE";//原则上COOKIE只有一个，担心有兼容性问题，保留
-        string sUpperHeadName=Vin_Tools::upper(sHeadName);
+        string sUpperHeadName = Vin_Tools::upper(sHeadName);
 
         if ((strcmp(sUpperHeadName.c_str(), pStr1) != 0) && (strcmp(sUpperHeadName.c_str(), pStr2) != 0)) {
             _headers.erase(sHeadName);
@@ -450,7 +452,7 @@ namespace vince {
     }
 
     string Vin_Http::getHeader(const string &sHeadName) const {
-        string sUpperHeadName=Vin_Tools::upper(sHeadName);
+        string sUpperHeadName = Vin_Tools::upper(sHeadName);
 
         auto it = _headers.find(sUpperHeadName);
         if (it == _headers.end()) {
@@ -613,7 +615,6 @@ namespace vince {
             string::size_type index = sLine.find(":");
             if (index != string::npos) {
                 string sTmp = Vin_Tools::upper(Vin_Tools::trim(sLine.substr(0, index), " "));
-
                 sHeader.insert(
                         multimap<string, string>::value_type(sTmp, Vin_Tools::trim(sLine.substr(index + 1), " ")));
             }
@@ -632,14 +633,14 @@ namespace vince {
 ///@cyz Implementation of Vin_HttpCookie
 
     bool Vin_HttpCookie::matchDomain(const string &sCookieDomain, const string &sDomain) {
-        string sLowerCookieDomain=Vin_Tools::lower(sCookieDomain);
+        string sLowerCookieDomain = Vin_Tools::lower(sCookieDomain);
 
         string sFixedLowerCookieDomain;
         if (!fixDomain(sLowerCookieDomain, sFixedLowerCookieDomain)) {
             return false;
         }
 
-        string sLowerDomain=Vin_Tools::lower(sDomain);
+        string sLowerDomain = Vin_Tools::lower(sDomain);
 
         if (sFixedLowerCookieDomain.substr(1) == sLowerDomain)
             return true;
@@ -742,7 +743,7 @@ namespace vince {
         cookies.push_back(cookieNew);
     }
 
-    bool Vin_HttpCookie::isCookieExpires(const Vin_HttpCookie::Cookie &cookie,time_t t) const {
+    bool Vin_HttpCookie::isCookieExpires(const Vin_HttpCookie::Cookie &cookie, time_t t) const {
         return cookie._expires != 0 && cookie._expires < t;
     }
 
@@ -764,7 +765,7 @@ namespace vince {
 
         cURL.parseURL(sCookieRspURL);
 
-        string sRspURLDomain=Vin_Tools::lower(cURL.getDomain());
+        string sRspURLDomain = Vin_Tools::lower(cURL.getDomain());
 
         string sRspURLPath = cURL.getPath();
 
@@ -790,7 +791,7 @@ namespace vince {
                 } else {
                     name = Vin_Tools::trim(v[j]);
                 }
-                
+
                 if (strcasecmp(name.c_str(), "secure") == 0) {
                     cookie._isSecure = true;
                 } else if (strcasecmp(name.c_str(), "expires") == 0) {
@@ -860,16 +861,16 @@ namespace vince {
 
     size_t Vin_HttpCookie::lenCookieMatch(const Vin_HttpCookie::Cookie &cookie, const Vin_URL &tURL) const {
         //域名没有匹配
-        if(!matchDomain(cookie._domain, tURL.getDomain()))
+        if (!matchDomain(cookie._domain, tURL.getDomain()))
             return 0;
 
         //路径没有匹配
         size_t len = matchPath(cookie._path, tURL.getPath());
-        if(len == 0)
+        if (len == 0)
             return 0;
 
         //安全的cookie,不安全的URL
-        if(cookie._isSecure && (tURL.getType() != Vin_URL::HTTPS))
+        if (cookie._isSecure && (tURL.getType() != Vin_URL::HTTPS))
             return 0;
 
         return len;
@@ -884,18 +885,15 @@ namespace vince {
 
         auto it = _cookies.begin();
 
-        while(it != _cookies.end())
-        {
+        while (it != _cookies.end()) {
             //检查Cookie是否过期
-            if(isCookieExpires(*it))
-            {
+            if (isCookieExpires(*it)) {
                 _cookies.erase(it++);
                 continue;
             }
 
             size_t len = lenCookieMatch(*it, tURL);
-            if(len == 0)
-            {
+            if (len == 0) {
                 ++it;
                 continue;
             }
@@ -914,15 +912,13 @@ namespace vince {
         getCookieForURL(sReqURL, cookies);
 
         auto it = cookies.begin();
-        while(it != cookies.end())
-        {
+        while (it != cookies.end()) {
             auto itd = it->_data.begin();
 
-            while(itd != it->_data.end())
-            {
+            while (itd != it->_data.end()) {
                 //被删除的cookie不输出
-                if(itd->first != "" && itd->second != "" && Vin_Tools::lower(itd->second) != "null"
-                   && Vin_Tools::lower(itd->second) != "deleted")
+                if (itd->first != "" && itd->second != "" && Vin_Tools::lower(itd->second) != "null"
+                    && Vin_Tools::lower(itd->second) != "deleted")
                     sCookie += itd->first + "=" + itd->second + "; ";
 
                 ++itd;
@@ -932,18 +928,15 @@ namespace vince {
         }
 
         //去掉末尾的 "; "
-        if(sCookie.length() >= 2)
-            sCookie = sCookie.substr(0, sCookie.length()-2);
+        if (sCookie.length() >= 2)
+            sCookie = sCookie.substr(0, sCookie.length() - 2);
     }
 
     void Vin_HttpCookie::deleteExpires(time_t t, bool bErase) {
-        for(auto it = _cookies.begin();it != _cookies.end();it++)
-        {
-            if((bErase && it->_expires ==0)||isCookieExpires(*it,t))
-            {
+        for (auto it = _cookies.begin(); it != _cookies.end(); it++) {
+            if ((bErase && it->_expires == 0) || isCookieExpires(*it, t)) {
                 _cookies.erase(it);
-            }
-            else{
+            } else {
                 it;
             }
         }
@@ -960,10 +953,8 @@ namespace vince {
 
         deleteExpires(t);
 
-        for(auto it = _cookies.begin();it != _cookies.end();it++)
-        {
-            if(it->_expires !=0)
-            {
+        for (auto it = _cookies.begin(); it != _cookies.end(); it++) {
+            if (it->_expires != 0) {
                 cookies.push_back(*it);
             }
         }
@@ -971,5 +962,704 @@ namespace vince {
         return cookies;
     }
 
+/////////////////////////////////////////////////////////////////////////
+///@cyz Implementation of Vin_HttpResponse
 
+    void Vin_HttpResponse::reset() {
+        Vin_Http::reset();
+
+        _status = 200;
+        _about = "OK";
+        _version = "HTTP/1.1";;
+
+        _iTmpContentLength = 0;
+    }
+
+    void Vin_HttpResponse::parseResponseHeader(const char *szBuffer) {
+        const char **ppChar = &szBuffer;
+
+        _headerLine = Vin_Tools::trim(getLine(ppChar));
+
+        string::size_type pos = _headerLine.find(' ');
+
+        if (pos != string::npos) {
+            _version = _headerLine.substr(0, pos);
+
+            string left = Vin_Tools::trim(_headerLine.substr(pos));
+
+            string::size_type pos1 = left.find(' ');
+
+            if (pos1 != string::npos) {
+                _status = Vin_Tools::strto<int>(left.substr(0, pos));
+
+                _about = Vin_Tools::trim(left.substr(pos1 + 1));
+            } else {
+                _status = Vin_Tools::strto<int>(left);
+
+                _about = "";
+            }
+
+            parseHeader(*ppChar, _headers);
+            return;
+        } else {
+            _version = _headerLine;
+            _status = 0;
+            _about = "";
+        }
+    }
+
+    bool Vin_HttpResponse::incrementDecode(string &sBuffer) {
+        //解析头部
+        if (_headLength == 0) {
+            string::size_type pos = sBuffer.find("\r\n\r\n");
+
+            if (pos == string::npos) {
+                return false;
+            }
+
+            parseResponseHeader(sBuffer.c_str());
+
+            if (_status == 204) {
+                return true;
+            }
+
+            auto it = _headers.find("Content-Length");
+            if (it != _headers.end()) {
+                _iTmpContentLength = getContentLength();
+            } else {
+                //没有指明ContentLength, 接收到服务器关闭连接
+                _iTmpContentLength = (size_t) -1;
+            }
+
+            _headLength = pos + 4;
+
+            sBuffer = sBuffer.substr(_headLength);
+
+            //重定向就认为成功了
+            if ((_status == 301 || _status == 302) && !getHeader("Location").empty()) {
+                return true;
+            }
+
+            //是否是chunk编码
+            _bIsChunked = (getHeader("Transfer-Encoding") == "chunked");
+
+            //删除头部里面
+            eraseHeader("Transfer-Encoding");
+        }
+
+        if (_bIsChunked) {
+            while (true) {
+                string::size_type pos = sBuffer.find("\r\n");
+                if (pos == string::npos)
+                    return false;
+
+                //查找当前chunk的大小
+                string sChunkSize = sBuffer.substr(0, pos);
+                long iChunkSize = strtol(sChunkSize.c_str(), NULL, 16);//chunk size是以十六进制的ASCII码表示
+
+                if (iChunkSize <= 0)
+                    break;      //所有chunk都接收完毕
+
+                if (sBuffer.length() >= pos + 2 + (size_t) iChunkSize + 2)   //接收到一个完整的chunk了
+                {
+                    //获取一个chunk的内容
+                    _content += sBuffer.substr(pos + 2, iChunkSize);
+
+                    //删除一个chunk
+                    sBuffer = sBuffer.substr(pos + 2 + iChunkSize + 2);
+                } else {
+                    //没有接收完整的chunk
+                    return false;
+                }
+
+                setContentLength(getContent().length());
+            }
+
+            sBuffer = "";
+
+            if (_iTmpContentLength == 0 || _iTmpContentLength == (size_t) -1) {
+                setContentLength(getContent().length());
+            }
+
+            return true;
+        } else {
+            if (_iTmpContentLength == 0) {
+                _content += sBuffer;
+                sBuffer = "";
+
+                //自动填写content-length
+                setContentLength(getContent().length());
+
+                return true;
+            } else if (_iTmpContentLength == (size_t) -1) {
+                //304的返回码中头没有Content-Length，不会有数据体
+                if (_status == 304) {
+                    return true;
+                }
+
+                _content += sBuffer;
+                sBuffer = "";
+
+                //自动填写content-length
+                setContentLength(getContent().length());
+
+                return false;
+            } else {
+                //chang连接模式, 接收到长度大于头部为止
+                _content += sBuffer;
+                sBuffer = "";
+
+                size_t iNowLength = getContent().length();
+
+                //头部的长度小于接收的内容, 还需要继续增加解析后续的buffer
+                if (iNowLength < _iTmpContentLength)
+                    return false;
+
+                return true;
+            }
+        }
+    }
+
+    bool Vin_HttpResponse::decode(const string &sBuffer) {
+        string::size_type pos = sBuffer.find("\r\n\r\n");
+
+        if (pos == string::npos) {
+            return false;
+        }
+
+        string tmp = sBuffer;
+
+        incrementDecode(tmp);
+
+        //body内容长度为0或者没有content-length  且非chunk模式, 则认为包收全了, 直接返回
+        if ((_iTmpContentLength == 0 || _iTmpContentLength == (size_t) -1) && !_bIsChunked)
+            return true;
+
+        return getContentLength() + getHeadLength() <= sBuffer.length();
+    }
+
+    bool Vin_HttpResponse::decode(const char *sBuffer, size_t iLength) {
+        assert(sBuffer != NULL);
+
+        string tmp(sBuffer, iLength);
+
+        return decode(tmp);
+    }
+
+    string Vin_HttpResponse::encode() const {
+        string sRet;
+
+        sRet += _version;
+        sRet += " ";
+        sRet += to_string(_status);
+        sRet += " ";
+        sRet += _about;
+        sRet += "\r\n";
+
+        sRet += genHeader();
+        sRet += "\r\n";
+
+        sRet += _content;
+
+        return sRet;
+    }
+
+    void Vin_HttpResponse::encode(vector<char> &vBuffer) const {
+        vBuffer.clear();
+
+        string s = encode();
+
+        vBuffer.resize(s.length());
+        memcpy(&vBuffer[0], s.c_str(), s.length());
+    }
+
+    string Vin_HttpResponse::getResponseHeaderLine() const {
+        return _headerLine;
+    }
+
+    int Vin_HttpResponse::getStatus() const {
+        return _status;
+    }
+
+    void Vin_HttpResponse::setStatus(int status) {
+        _status = status;
+    }
+
+    string Vin_HttpResponse::getAbout() const {
+        return _about;
+    }
+
+    void Vin_HttpResponse::setAbout(const string &about) {
+        _about = about;
+    }
+
+    string Vin_HttpResponse::getVersion() const {
+        return _version;
+    }
+
+    void Vin_HttpResponse::setVersion(const string &sVersion) {
+        _version = sVersion;
+    }
+
+    void Vin_HttpResponse::setResponse(int status, const string &about, const string &body) {
+        _status = status;
+        _about = about;
+        _content = body;
+
+        _headerLine = "";
+        _headerLine += _version;
+        _headerLine += " ";
+        _headerLine += to_string(_status);
+        _headerLine += " ";
+        _headerLine += _about;
+
+        setHeader("Content-Length", to_string(_content.length()));
+    }
+
+    void Vin_HttpResponse::setResponse(int status, const string &about, const char *sBuffer, size_t iLength) {
+        string body(sBuffer, iLength);
+        setResponse(status, about, body);
+    }
+
+    void Vin_HttpResponse::setResponse(const char *sBuffer, size_t iLength) {
+        setResponse(200, "OK", sBuffer, iLength);
+    }
+
+    void Vin_HttpResponse::setServer(const string &sServer) {
+        setHeader("Server", sServer);
+    }
+
+    void Vin_HttpResponse::setSetCookie(const string &sCookie) {
+        setHeader("Set-Cookie", sCookie);
+    }
+
+    vector<string> Vin_HttpResponse::getSetCookie() const {
+        return getHeaderMulti("Set-Cookie");
+    }
+
+/////////////////////////////////////////////////////////////////////////
+///@cyz Implementation of Vin_HttpRequest
+
+    Vin_HttpRequest::Vin_HttpRequest() {
+        Vin_HttpRequest::reset();
+        setUserAgent("Vin_Http");
+    }
+
+    void Vin_HttpRequest::reset() {
+        Vin_Http::reset();
+        _httpURL.clear();
+    }
+
+    string Vin_HttpRequest::requestType2str(int iRequestType) const {
+        string ret;
+        switch (iRequestType) {
+            case REQUEST_GET:
+                ret = "GET";
+                break;
+            case REQUEST_POST:
+                ret = "POST";
+                break;
+            case REQUEST_PUT:
+                ret = "PUT";
+                break;
+            case REQUEST_HEAD:
+                ret = "HEAD";
+                break;
+            case REQUEST_OPTIONS:
+                ret = "OPTIONS";
+                break;
+            case REQUEST_DELETE:
+                ret = "DELETE";
+                break;
+            default:
+                ret = "";
+        }
+        return ret;
+    }
+
+    vector<string> Vin_HttpRequest::getCookie() {
+        vector<string> v;
+
+        for (auto it = _headers.begin(); it != _headers.end(); ++it) {
+            if (it->first == "Cookie") {
+                v.push_back(it->second);
+            }
+        }
+
+        return v;
+    }
+
+    void Vin_HttpRequest::parseURL(const string &sUrl) {
+        _httpURL.parseURL(sUrl);
+
+        //设置Host
+        if (getHeader("Host").empty()) {
+            //缺省端口可以不用放进去
+            string sPort = _httpURL.isDefaultPort() ? "" : ":" + _httpURL.getPort();
+            setHost(_httpURL.getDomain() + sPort);
+        }
+    }
+
+    void Vin_HttpRequest::encode(int iRequestType, ostream &os) {
+        os << requestType2str(iRequestType) << " " << _httpURL.getRequest() << " HTTP/1.1\r\n";
+        os << genHeader() << "\r\n";
+    }
+
+    void Vin_HttpRequest::setGetRequest(const string &sUrl, bool bNewCreateHost) {
+        if (bNewCreateHost) {
+            eraseHeader("Host");
+        }
+
+        parseURL(sUrl);
+        _requestType = REQUEST_GET;
+        _content = "";
+
+        eraseHeader("Content-Length");
+    }
+
+    void Vin_HttpRequest::setHeadRequest(const string &sUrl, bool bNewCreateHost) {
+        if (bNewCreateHost) {
+            eraseHeader("Host");
+        }
+
+        parseURL(sUrl);
+        _requestType = REQUEST_HEAD;
+        _content = "";
+
+        eraseHeader("Content-Length");
+    }
+
+    void Vin_HttpRequest::setPostRequest(const string &sUrl, const string &sPostBody, bool bNewCreateHost) {
+        if (bNewCreateHost) {
+            eraseHeader("Host");
+        }
+
+        parseURL(sUrl);
+        _requestType = REQUEST_POST;
+        _content = sPostBody;
+
+        setHeader("Content-Length", to_string(_content.length()));
+    }
+
+    void Vin_HttpRequest::setPostRequest(const string &sUrl, const char *sBuffer, size_t iLength, bool bNewCreateHost) {
+        string sPostBody(sBuffer, iLength);
+        setPostRequest(sUrl, sPostBody, bNewCreateHost);
+    }
+
+    void Vin_HttpRequest::setPutRequest(const string &sUrl, const string &sPostBody, bool bNewCreateHost) {
+        if (bNewCreateHost) {
+            eraseHeader("Host");
+        }
+
+        parseURL(sUrl);
+        _requestType = REQUEST_PUT;
+        _content = sPostBody;
+
+        setHeader("Content-Length", to_string(_content.length()));
+    }
+
+    void Vin_HttpRequest::setDeleteRequest(const string &sUrl, const string &sPostBody, bool bNewCreateHost) {
+        if (bNewCreateHost) {
+            eraseHeader("Host");
+        }
+
+        parseURL(sUrl);
+        _requestType = REQUEST_DELETE;
+        _content = sPostBody;
+
+        setHeader("Content-Length", to_string(_content.length()));
+    }
+
+    void Vin_HttpRequest::setOptionsRequest(const string &sUrl, bool bNewCreateHost) {
+        if (bNewCreateHost) {
+            eraseHeader("Host");
+        }
+
+        parseURL(sUrl);
+        _requestType = REQUEST_OPTIONS;
+        _content = "";
+
+        eraseHeader("Content-Length");
+    }
+
+    string Vin_HttpRequest::encode() {
+        string sRet;
+
+        if (_requestType == REQUEST_POST || _requestType == REQUEST_PUT || _requestType == REQUEST_DELETE)
+            setContentLength(_content.length());
+
+        sRet += requestType2str(_requestType);
+        sRet += " ";
+        sRet += _httpURL.getRequest();
+        sRet += " HTTP/1.1\r\n";
+        sRet += genHeader();
+        sRet += "\r\n";
+
+        return sRet;
+    }
+
+    void Vin_HttpRequest::encode(vector<char> &buffer) {
+        buffer.clear();
+
+        string s = encode();
+        buffer.resize(s.length());
+        memcpy(&buffer[0], s.c_str(), s.length());
+    }
+
+    bool Vin_HttpRequest::decode(const string &sBuffer) {
+        return decode(sBuffer.c_str(), sBuffer.length());
+    }
+
+    bool Vin_HttpRequest::decode(const char *sBuffer, size_t iLength) {
+        assert(sBuffer != nullptr);
+
+        if (strncasecmp(sBuffer, "GET ", 4) != 0 && strncasecmp(sBuffer, "POST ", 5) != 0 &&
+            strncasecmp(sBuffer, "OPTIONS ", 8) != 0 && strncasecmp(sBuffer, "HEAD ", 5) != 0 &&
+            strncasecmp(sBuffer, "DELETE ", 7) != 0 && strncasecmp(sBuffer, "PUT ", 4) != 0) {
+            throw Vin_HttpRequest_Exception(
+                    "[TC_HttpRequest::checkRequest] protocol not support, only support GET HEAD POST and OPTIONS ");
+        }
+
+        if (strstr(sBuffer, "\r\n\r\n") == NULL) {
+            return false;
+        }
+
+        _headLength = parseRequestHeader(sBuffer);
+
+        bool bChunk = (getHeader("Transfer-Encoding") == "chunked");
+
+        if (bChunk) {
+            string sTmp(sBuffer + _headLength, iLength - _headLength);
+            while (true) {
+                string::size_type pos = sTmp.find("\r\n");
+                if (pos == string::npos)
+                    return false;
+
+                //查找当前chunk的大小
+                string sChunkSize = sTmp.substr(0, pos);
+                long iChunkSize = strtol(sChunkSize.c_str(), NULL, 16);
+
+                if (iChunkSize <= 0)
+                    break;      //所有chunk都接收完毕
+
+                if (sTmp.length() >= pos + 2 + (size_t) iChunkSize + 2)   //接收到一个完整的chunk了
+                {
+                    //获取一个chunk的内容
+                    _content += sTmp.substr(pos + 2, iChunkSize);
+
+                    //删除一个chunk
+                    sTmp = sTmp.substr(pos + 2 + iChunkSize + 2);
+                } else {
+                    //没有接收完整的chunk
+                    return false;
+                }
+
+                setContentLength(getContent().length());
+            }
+        } else {
+            _content.assign((sBuffer + _headLength), iLength - _headLength);
+        }
+
+        return (getContentLength() + getHeadLength() == iLength);
+    }
+
+    size_t Vin_HttpRequest::parseRequestHeader(const char *szBuffer) {
+        const char *szBuffer_copy = szBuffer;
+        const char **ppChar = &szBuffer;
+
+        /* parse the first line and get status */
+        string sLine = getLine(ppChar);
+
+        string::size_type pos = sLine.find(" ");
+        if (pos == string::npos) {
+            throw Vin_HttpRequest_Exception(
+                    "[Vin_HttpRequest::parseRequestHeader] http request format error: " + sLine);
+        }
+
+        string sMethod = Vin_Tools::trim(sLine.substr(0, pos));
+        //解析请求类型
+        if (strncasecmp(sMethod.c_str(), "GET", 3) == 0)    //if(sMethod == "GET")
+        {
+            _requestType = REQUEST_GET;
+        } else if (strncasecmp(sMethod.c_str(), "POST", 4) == 0)    //else if(sMethod == "POST")
+        {
+            _requestType = REQUEST_POST;
+        } else if (strncasecmp(sMethod.c_str(), "OPTIONS", 7) == 0)    //else if(sMethod == "OPTIONS")
+        {
+            _requestType = REQUEST_OPTIONS;
+        } else if (strncasecmp(sMethod.c_str(), "HEAD", 4) == 0) {
+            _requestType = REQUEST_HEAD;
+        } else {
+            throw Vin_HttpRequest_Exception(
+                    "[Vin_HttpRequest::parseRequestHeader] http request command error: " + sMethod);
+        }
+
+        string::size_type pos1 = sLine.rfind(" ");
+        if (pos1 == string::npos || pos1 <= pos) {
+            throw Vin_HttpRequest_Exception(
+                    "[Vin_HttpRequest::parseRequestHeader] http request format error: " + sLine);
+        }
+
+        //URL地址
+        string sURL = Vin_Tools::trim(sLine.substr(pos + 1, pos1 - pos));
+
+        //HTTP协议版本
+        string sVersion = Vin_Tools::upper(Vin_Tools::trim(sLine.substr(pos1 + 1)));
+
+        if (sVersion != "HTTP/1.1" && sVersion != "HTTP/1.0") {
+            sVersion = "HTTP/1.1";
+        }
+
+        size_t n = parseHeader(*ppChar, _headers) - szBuffer_copy;
+
+        if (strncasecmp(sURL.c_str(), "https://", 8) != 0) {
+            if (strncasecmp(sURL.c_str(), "http://", 7) != 0) {
+                sURL = "http://" + getHost() + sURL;
+            }
+        }
+
+        parseURL(sURL);
+
+        return n;
+    }
+
+    bool Vin_HttpRequest::checkRequest(const char *sBuffer, size_t iLen) {
+        assert(sBuffer != nullptr);
+
+        if (strncasecmp(sBuffer, "GET ", 4) != 0 && strncasecmp(sBuffer, "POST ", 5) != 0 &&
+            strncasecmp(sBuffer, "OPTIONS ", 8) != 0 && strncasecmp(sBuffer, "HEAD ", 5) != 0 &&
+            strncasecmp(sBuffer, "DELETE ", 7) != 0 && strncasecmp(sBuffer, "PUT ", 4) != 0) {
+            throw Vin_HttpRequest_Exception(
+                    "[TC_HttpRequest::checkRequest] protocol not support, only support GET HEAD POST and OPTIONS ");
+        }
+
+        const char *p = strstr(sBuffer, "\r\n\r\n");
+        if (p == nullptr) {
+            return false;
+        }
+
+        size_t pos = p - sBuffer;
+
+        size_t iHeadLen = pos + 4;
+
+        const char **ppChar = &sBuffer;
+
+        bool bChunk = false;
+
+        //找到\r\n\r\n之前的长度表示
+        while (true) {
+            size_t iMoveLen = (*ppChar) - sBuffer;
+            if (iMoveLen >= iHeadLen) {
+                break;
+            }
+
+            size_t len = 0;
+            string sLine = getLine(ppChar, iHeadLen - iMoveLen);
+            if (sLine == "") {
+                len = 0;
+            } else if (strncasecmp(sLine.c_str(), "Transfer-Encoding:", 18) == 0) {
+                bChunk = (Vin_Tools::trim(sLine.substr(18)) == "chunked");
+                if (bChunk)
+                    break;
+            } else if (strncasecmp(sLine.c_str(), "Content-Length:", 15) != 0) {
+                continue;
+            } else {
+                len = Vin_Tools::strto<size_t>(Vin_Tools::trim(sLine.substr(15), " "));
+            }
+
+            if (len + pos + 4 <= iLen) {
+                return true;
+            } else {
+                break;
+
+            }
+        }
+
+        if (bChunk) {
+            size_t remain_len = iLen - iHeadLen;
+            size_t move_len = 0;
+            const char *pCur = p + 4;
+            while (true) {
+                p = strstr(pCur, "\r\n");
+                if (p == NULL) {
+                    return false;
+                }
+
+                //查找当前chunk的大小
+                long iChunkSize = strtol(string(pCur, p - pCur).c_str(), NULL, 16);
+                if (iChunkSize <= 0) {
+                    return true; //所有chunk都接收完毕
+                }
+
+                move_len = (p - pCur) + 2 + iChunkSize + 2;
+                if (remain_len >= move_len)   //接收到一个完整的chunk了
+                {
+                    //移动到下一个chunk
+                    remain_len -= move_len;
+                    pCur = p + 2 + iChunkSize + 2;
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    void Vin_HttpRequest::getHostPort(string &sDomain, uint32_t &iPort) {
+        sDomain = _httpURL.getDomain();
+        iPort = Vin_Tools::strto<uint32_t>(_httpURL.getPort());
+    }
+
+    int Vin_HttpRequest::doRequest(Vin_HttpResponse &stHttpRsp, int iTimeout) {
+        //只支持短连接模式
+        setConnection("close");
+
+        string sSendBuffer = encode();
+
+        string sHost;
+        uint32_t iPort;
+
+        getHostPort(sHost, iPort);
+
+        Vin_TCPClient tcpClient;
+        tcpClient.init(sHost, iPort, iTimeout);
+
+        int iRet = tcpClient.send(sSendBuffer.c_str(), sSendBuffer.length());
+        if (iRet != Vin_TCPClient::EM_SUCCESS) {
+            return iRet;
+        }
+
+        stHttpRsp.reset();
+
+        string sBuffer;
+
+        size_t iRecvLen = 1024 * 10;
+        char *sTmpBuffer = new char[iRecvLen];
+
+        while (true) {
+            iRecvLen = 1024 * 10;
+
+            iRet = tcpClient.recv(sTmpBuffer, iRecvLen);
+
+            if (iRet == Vin_TCPClient::EM_SUCCESS)
+                sBuffer.append(sTmpBuffer, iRecvLen);
+
+            switch (iRet) {
+                case Vin_TCPClient::EM_SUCCESS:
+                    if (stHttpRsp.incrementDecode(sBuffer)) {
+                        delete[]sTmpBuffer;
+                        return Vin_TCPClient::EM_SUCCESS;
+                    }
+                    continue;
+                case Vin_TCPClient::EM_CLOSE:
+                    stHttpRsp.incrementDecode(sBuffer);
+                    delete[]sTmpBuffer;
+                    return Vin_TCPClient::EM_SUCCESS;
+                default:
+                    delete[]sTmpBuffer;
+                    return iRet;
+            }
+        }
+    }
 }
