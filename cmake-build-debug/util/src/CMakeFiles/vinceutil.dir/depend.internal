@@ -12,6 +12,8 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o
  /home/cyz/CLionProjects/clog/util/src/Vin_Buffer.cpp
 util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o
  ..//util/include/Vin_Cgi.h
+ ..//util/include/Vin_Exception.h
+ ..//util/include/Vin_Http.h
  ..//util/include/Vin_Tools.h
  ../util/include/Vin_Exception.h
  /home/cyz/CLionProjects/clog/util/src/Vin_Cgi.cpp
@@ -36,9 +38,13 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o
  ..//util/include/Vin_Exception.h
  /home/cyz/CLionProjects/clog/util/src/Vin_Exception.cpp
 util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o
+ ..//util/include/Vin_ClientSocket.h
+ ..//util/include/Vin_Endpoint.h
  ..//util/include/Vin_Exception.h
  ..//util/include/Vin_Http.h
  ..//util/include/Vin_Tools.h
+ ../util/include/Vin_Exception.h
+ ../util/include/Vin_Socket.h
  /home/cyz/CLionProjects/clog/util/src/Vin_Http.cpp
 util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o
  ..//util/include/Vin_MemoryPool.h

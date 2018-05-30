@@ -203,6 +203,8 @@ util/include/Vin_Tools.h
 /home/cyz/CLionProjects/clog/util/src/util/include/Vin_Tools.h
 util/include/Vin_Cgi.h
 /home/cyz/CLionProjects/clog/util/src/util/include/Vin_Cgi.h
+util/include/Vin_Http.h
+/home/cyz/CLionProjects/clog/util/src/util/include/Vin_Http.h
 
 /home/cyz/CLionProjects/clog/util/src/Vin_ClientSocket.cpp
 util/include/Vin_ClientSocket.h
@@ -240,6 +242,8 @@ string
 algorithm
 -
 assert.h
+-
+util/include/Vin_ClientSocket.h
 -
 util/include/Vin_Http.h
 /home/cyz/CLionProjects/clog/util/src/util/include/Vin_Http.h

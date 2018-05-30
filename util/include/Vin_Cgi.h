@@ -32,7 +32,7 @@ namespace vince {
 
         Vin_Cgi_Exception(const string &buffer, int err) : Vin_Exception(buffer, err) {};
 
-        ~Vin_Cgi_Exception() throw() {};
+        ~Vin_Cgi_Exception() noexcept {};
     };
 
     /**

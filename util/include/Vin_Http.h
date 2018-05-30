@@ -916,14 +916,14 @@ namespace vince {
          *
          * @param sUserAgent
          */
-        void setUserAgent(const string &sUserAgent) { setHeader("User-Agent", sUserAgent); }
+        void setUserAgent(const string &sUserAgent);
 
         /**
          * @brief 设置 Cookie.
          *
          * @param sCookie
          */
-        void setCookie(const string &sCookie) { setHeader("Cookie", sCookie); }
+        void setCookie(const string &sCookie);
 
         /**
          * @brief 获取原始Cookie行.
@@ -1045,63 +1045,63 @@ namespace vince {
          *
          * @return 是GET请求返回true，否则返回false
          */
-        bool isGET() const { return _requestType == REQUEST_GET; }
+        bool isGET() const;
 
         /**
          * @brief 是否是HEAD请求.
          *
          * @return 是HEAD请求返回true，否则返回false
          */
-        bool isHEAD() const { return _requestType == REQUEST_HEAD; }
+        bool isHEAD() const;
 
         /**
          * @brief 是否是POST请求.
          *
          * @return 是GET请求返回true，否则返回false
          */
-        bool isPOST() const { return _requestType == REQUEST_POST; }
+        bool isPOST() const;
 
         /**
          * @brief 是否是OPTIONS请求.
          *
          * @return 是GET请求返回true，否则返回false
          */
-        bool isOPTIONS() const { return _requestType == REQUEST_OPTIONS; }
+        bool isOPTIONS() const;
 
         /**
          * @brief 获取请求的URL.
          *
          * @return const TC_URL&
          */
-        const Vin_URL &getURL() const { return _httpURL; }
+        const Vin_URL &getURL() const;
 
         /**
          * @brief 获取完整的http请求.
          *
          * @return http请求串
          */
-        string getOriginRequest() const { return _httpURL.getURL(); }
+        string getOriginRequest() const;
 
         /**
          * @brief 获取http请求的url，不包括Host,
          *        例如http://www.qq.com/abc?a=b, 则为:/abc?a=b
          * @return http请求的url
          */
-        string getRequest() const { return _httpURL.getRequest(); }
+        string getRequest() const;
 
         /**
          * @brief 获取http请求的url部分, 即?前面，不包括Host,
          *        例如http://www.qq.com/abc?a=b#def, 则为:/abc
          * @return http请求的url部分
          * */
-        string getRequestUrl() const { return _httpURL.getPath(); }
+        string getRequestUrl() const;
 
         /**
          * @brief 获取http请求url后的参数部分，即?后面#前面部分不
          *        包括Host, 例如http://www.qq.com/abc?a=b#def, 则为:a=b
          * @return http请求url后的参数部分
          */
-        string getRequestParam() const { return _httpURL.getQuery(); }
+        string getRequestParam() const;
 
         /**
          * @brief 解析请求头部.

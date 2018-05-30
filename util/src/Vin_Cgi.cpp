@@ -6,6 +6,7 @@
 #include <iostream>
 #include "util/include/Vin_Tools.h"
 #include "util/include/Vin_Cgi.h"
+#include "util/include/Vin_Http.h"
 
 namespace vince {
 /////////////////////////////////////////////////////////////////////////
@@ -84,6 +85,20 @@ namespace vince {
         }
 
         _is = &cin;
+
+        readCgiInput(_mmpParams, _mpCookies);
+    }
+
+    void Vin_Cgi::parseCgi(const Vin_HttpRequest &request) {
+        setCgiEnv("QUERY_STRING", request.getRequestParam());
+        setCgiEnv("CONTENT_LENGTH", to_string(request.getContentLength()));
+        setCgiEnv("HTTP_COOKIE", request.getHeader("Cookie"));
+        setCgiEnv("CONTENT_TYPE", request.getHeader("Content-Type"));
+        setCgiEnv("REQUEST_METHOD", request.isGET() ? "GET" : "POST");
+
+        _buffer = request.getContent();
+        _iss.str(_buffer);
+        _is = &_iss;
 
         readCgiInput(_mmpParams, _mpCookies);
     }

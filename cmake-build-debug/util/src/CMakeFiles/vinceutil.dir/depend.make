@@ -11,6 +11,8 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: ../util/include/Vin_Buffer.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Buffer.cpp.o: ../util/src/Vin_Buffer.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/include/Vin_Cgi.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/include/Vin_Exception.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/include/Vin_Http.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/include/Vin_Tools.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Cgi.cpp.o: ../util/src/Vin_Cgi.cpp
@@ -35,9 +37,13 @@ util/src/CMakeFiles/vinceutil.dir/Vin_Epoller.cpp.o: ../util/src/Vin_Epoller.cpp
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Exception.cpp.o: ../util/src/Vin_Exception.cpp
 
+util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_ClientSocket.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_Endpoint.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_Exception.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_Http.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_Tools.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_Exception.h
+util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/include/Vin_Socket.h
 util/src/CMakeFiles/vinceutil.dir/Vin_Http.cpp.o: ../util/src/Vin_Http.cpp
 
 util/src/CMakeFiles/vinceutil.dir/Vin_MemoryPool.cpp.o: ../util/include/Vin_MemoryPool.h

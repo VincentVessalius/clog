@@ -645,10 +645,16 @@ namespace vince {
         if (sFixedLowerCookieDomain.substr(1) == sLowerDomain)
             return true;
 
-        if ((sLowerDomain.length() > sFixedLowerCookieDomain.length()
-             && (sLowerDomain.compare(sLowerDomain.find('.'),
-                                      sFixedLowerCookieDomain.length(), sFixedLowerCookieDomain) == 0))) {
-            return true;
+        if (sFixedLowerCookieDomain.length() <= sLowerDomain.length()) {
+            if ((sLowerDomain.compare(sLowerDomain.find('.'),
+                                      sFixedLowerCookieDomain.length(), sFixedLowerCookieDomain) == 0)) {
+                return true;
+            } else if (sLowerDomain.find('.') != string::npos) {
+                if ((sLowerDomain.compare(sLowerDomain.find('.', 1 + sLowerDomain.find('.')),
+                                          sFixedLowerCookieDomain.length(), sFixedLowerCookieDomain) == 0)) {
+                    return true;
+                }
+            }
         }
 
         return false;
@@ -1661,5 +1667,49 @@ namespace vince {
                     return iRet;
             }
         }
+    }
+
+    void Vin_HttpRequest::setUserAgent(const string &sUserAgent) {
+        setHeader("User-Agent", sUserAgent);
+    }
+
+    void Vin_HttpRequest::setCookie(const string &sCookie) {
+        setHeader("Cookie", sCookie);
+    }
+
+    bool Vin_HttpRequest::isGET() const {
+        return _requestType == REQUEST_GET;
+    }
+
+    bool Vin_HttpRequest::isHEAD() const {
+        return _requestType == REQUEST_HEAD;
+    }
+
+    bool Vin_HttpRequest::isPOST() const {
+        return _requestType == REQUEST_POST;
+    }
+
+    bool Vin_HttpRequest::isOPTIONS() const {
+        return _requestType == REQUEST_OPTIONS;
+    }
+
+    const Vin_URL &Vin_HttpRequest::getURL() const {
+        return _httpURL;
+    }
+
+    string Vin_HttpRequest::getOriginRequest() const {
+        return _httpURL.getURL();
+    }
+
+    string Vin_HttpRequest::getRequest() const {
+        return _httpURL.getRequest();
+    }
+
+    string Vin_HttpRequest::getRequestUrl() const {
+        return _httpURL.getPath();
+    }
+
+    string Vin_HttpRequest::getRequestParam() const {
+        return _httpURL.getQuery();
     }
 }
